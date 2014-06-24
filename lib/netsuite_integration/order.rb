@@ -72,8 +72,12 @@ module NetsuiteIntegration
     end
 
     def paid?
-      payment_total = order_payload[:payments].sum { |p| p[:amount] }
-      order_payload[:totals][:order] <= payment_total
+      if order_payload[:payments]
+        payment_total = order_payload[:payments].sum { |p| p[:amount] }
+        order_payload[:totals][:order] <= payment_total
+      else
+        false
+      end
     end
 
     def errors
@@ -156,7 +160,7 @@ module NetsuiteIntegration
       # Due to NetSuite complexity, taxes and discounts will be treated as line items.
       ["tax", "discount"].map do |type|
         value = order_payload[:adjustments].sum do |hash|
-          if hash[:name] == type.capitalize
+          if hash[:name].to_s.downcase == type.downcase
             hash[:value]
           else
             0
