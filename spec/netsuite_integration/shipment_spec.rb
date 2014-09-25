@@ -85,17 +85,17 @@ module NetsuiteIntegration
         end
 
         it "handles extra attributes when creating fulfillment" do
-          subject.stub order_pending_fulfillment?: true, order_id: 1
+          subject.stub order: double
 
-          expect(NetSuite::Records::ItemFulfillment).to receive(:new).and_return double.as_null_object
+          expect(NetSuite::Records::ItemFulfillment).to receive(:initialize).and_return double.as_null_object
           expect(subject).to receive(:handle_extra_fields)
           subject.create_item_fulfillment
-          end
+        end
 
-          it "sets extra attributes properly" do
-            subject.handle_extra_fields fulfillment, :netsuite_shipment_fields
-            expect(fulfillment.memo).to eq "Extra memo"
-          end
+        it "sets extra attributes properly" do
+          subject.handle_extra_fields fulfillment, :netsuite_shipment_fields
+          expect(fulfillment.memo).to eq "Extra memo"
+        end
 
         it "sets extra attributes properly as reference" do
           subject.handle_extra_fields fulfillment, :netsuite_shipment_fields

@@ -301,7 +301,10 @@ describe NetsuiteEndpoint do
 
     context 'when successful' do
       it 'returns the fulfilled order' do
-        VCR.use_cassette("shipment/import") do
+        shipment = Factories.shipment_fulfillment_payload
+        request = shipment.merge(parameters: parameters)
+
+        VCR.use_cassette("shipment/#{shipment[:shipment][:id]}") do
           post '/add_shipment', request.to_json, auth
           expect(last_response).to be_ok
         end
