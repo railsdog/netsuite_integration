@@ -38,6 +38,7 @@ module NetsuiteIntegration
       # All default attributes are set on the fulfillment object
       fulfillment = NetSuite::Records::ItemFulfillment.initialize order
       fulfillment.shipping_cost = shipment_payload[:cost]
+      fulfillment.ship_status = fulfillment_ship_status
 
       if address
         fulfillment.transaction_ship_address = {
@@ -50,6 +51,10 @@ module NetsuiteIntegration
           ship_country:   Services::CountryService.by_iso_country(address[:country]),
           ship_phone:     address[:phone].gsub(/([^0-9]*)/, "")
         }
+      else
+        # NOTE Avoid a INSUFFICIENT_PERMISSION error on shipcountry we couldn't
+        # figure out the reason
+        fulfillment.transaction_ship_address = nil
       end
 
       # NetSuite will through an error when you dont return all items back
@@ -111,6 +116,19 @@ module NetsuiteIntegration
             record.send ref_method, NetSuite::Records::RecordRef.new(internal_id: v)
           end
         end
+      end
+    end
+
+    # See https://system.netsuite.com/help/helpcenter/en_US/srbrowser/Browser2014_1/schema/enum/itemfulfillmentshipstatus.html?mode=package
+    #
+    # Default to shipped
+    def fulfillment_ship_status
+      value = shipment_payload[:status].to_s.downcase
+
+      if ["packed", "picked", "shipped"].include? value
+        "_#{value}"
+      else
+        "_shipped"
       end
     end
 
