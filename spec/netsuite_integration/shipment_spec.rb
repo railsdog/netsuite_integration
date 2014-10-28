@@ -55,6 +55,7 @@ module NetsuiteIntegration
         config["netsuite_poll_fulfillment_timestamp"] = '2014-04-27T18:48:56.001Z'
         Services::ItemFulfillment.any_instance.stub latest: items
         NetSuite::Records::SalesOrder.stub get: double("Sales Order", external_id: 123)
+        NetSuite::Records::Customer.stub get: double("Customer", email: "wombat@spree")
       end
 
       it "builds out a collection of shipments from item fulfillments" do
