@@ -1,2 +1,4 @@
 .bundle
 netsuite.log
+.idea
+/.idea/*
