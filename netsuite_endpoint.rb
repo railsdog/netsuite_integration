@@ -21,6 +21,7 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
   end
 
   before do
+
     if config = @config
       @netsuite_client ||= NetSuite.configure do
         reset!
@@ -78,6 +79,7 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
       end
     end
   end
+
 
   post '/cancel_order' do
     if order = sales_order_service.find_by_external_id(@payload[:order][:number] || @payload[:order][:id])
@@ -144,6 +146,20 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
     order = NetsuiteIntegration::Shipment.new(@config, @payload).import
     result 200, "Order #{order.external_id} fulfilled in NetSuite # #{order.tran_id}"
   end
+
+
+  post '/add_invoice' do
+    puts "#TS IN EndPoint : ADD INVOICE"
+    begin
+      invoice = NetsuiteIntegration::Invoice.new(@config, @payload).import
+    rescue => e
+      puts e.inspect
+    end
+
+    result 200, "Order #{order.external_id} fulfilled"
+  end
+
+
 
   private
   # NOTE move this somewhere else ..

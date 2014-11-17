@@ -7,7 +7,9 @@ gem 'tilt-jbuilder', require: 'sinatra/jbuilder'
 gem 'jbuilder', '2.0.6'
 gem 'endpoint_base', github: 'spree/endpoint_base'
 
-gem 'netsuite', github: 'huoxito/netsuite', branch: 'fix-customer-field-refs'
+#gem 'netsuite', github: 'huoxito/netsuite', branch: 'fix-customer-field-refs'
+gem 'netsuite', path: '/home/ruby_user/SoftwareDev/railsdog/netsuite'
+
 gem 'honeybadger'
 
 group :development do
@@ -20,6 +22,7 @@ group :test do
   gem 'rspec', '~> 2.14'
   gem 'rack-test'
   gem 'webmock'
+  gem 'teamcity-ruby-client'
 end
 
 group :production do

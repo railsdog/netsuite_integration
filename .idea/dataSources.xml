@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1519557482">
+    <data-source source="LOCAL" name="Rails loa: development" uuid="312d159f-a6f7-44a3-a728-908e4d6e2ef8">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/loa_dev</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfc8dfc3dfdedfc4dfcbdfc7dfc3</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails loa: test" uuid="932ffe56-f077-4d22-84c2-34531c39a944">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/loa_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfc8dfc3dfdedfc4dfcbdfc7dfc3</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails loa: production" uuid="0c43fd77-3647-44f1-930b-7c49b40f5a10">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/loa_refinery</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfdcdffedf9edfeddfffdfe8dfebdf9cdfefdffddfdadfc2df9edfebdfdcdfc9</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

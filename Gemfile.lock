@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/huoxito/netsuite.git
-  revision: 3b8a21341f5e1fcd44b987c4e5f9ca994f878481
-  branch: fix-customer-field-refs
-  specs:
-    netsuite (0.2.4)
-      savon (~> 2.3.0)
-
-GIT
   remote: git://github.com/spree/endpoint_base.git
   revision: 5a819541b20ade1b7ec6eb19f38fbab7eaf3e14e
   specs:
@@ -14,6 +6,12 @@ GIT
       activesupport
       jbuilder
       json
+
+PATH
+  remote: /home/ruby_user/SoftwareDev/railsdog/netsuite
+  specs:
+    netsuite (0.2.4)
+      savon (~> 2.3.0)
 
 GEM
   remote: https://www.rubygems.org/
@@ -34,11 +32,16 @@ GEM
       safe_yaml (~> 0.9.0)
     diff-lcs (1.2.5)
     dotenv (0.9.0)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
     foreman (0.63.0)
       dotenv (>= 0.7)
       thor (>= 0.13.6)
     gyoku (1.1.1)
       builder (>= 2.1.2)
+    hashie (3.3.1)
     honeybadger (1.13.0)
       json
     httpi (2.1.0)
@@ -55,6 +58,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     nori (2.3.0)
@@ -92,6 +96,10 @@ GEM
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
     slop (3.4.7)
+    teamcity-ruby-client (1.3.1)
+      faraday (~> 0.9.0)
+      faraday_middleware (~> 0.9.0)
+      hashie (>= 2.0)
     thor (0.18.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -127,6 +135,7 @@ DEPENDENCIES
   rake
   rspec (~> 2.14)
   sinatra
+  teamcity-ruby-client
   tilt (~> 1.4.1)
   tilt-jbuilder
   unicorn
