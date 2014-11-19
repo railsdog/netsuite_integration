@@ -2,6 +2,9 @@ require 'rubygems'
 require 'bundler'
 require 'pry'
 
+require 'dotenv'
+Dotenv.load
+
 Bundler.require(:default, :test)
 
 require File.join(File.dirname(__FILE__), '..', 'lib/netsuite_integration')

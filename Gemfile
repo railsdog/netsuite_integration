@@ -12,6 +12,7 @@ gem 'netsuite', path: '/home/ruby_user/SoftwareDev/railsdog/netsuite'
 
 gem 'honeybadger'
 
+
 group :development do
   gem "rake"
   gem "pry"
@@ -23,6 +24,7 @@ group :test do
   gem 'rack-test'
   gem 'webmock'
   gem 'teamcity-ruby-client'
+  gem 'dotenv'
 end
 
 group :production do

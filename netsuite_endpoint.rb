@@ -149,14 +149,14 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
 
 
   post '/add_invoice' do
-    puts "#TS IN EndPoint : ADD INVOICE"
-    begin
-      invoice = NetsuiteIntegration::Invoice.new(@config, @payload).import
+    invoice =  begin
+     NetsuiteIntegration::Invoice.new(@config, @payload).create
     rescue => e
       puts e.inspect
+      result 500, "Failed Invoice creation in NetSuite - #{e.message}"
     end
 
-    result 200, "Order #{order.external_id} fulfilled"
+    result 200, "Invoice successfully created in NetSuite for Order #{invoice.external_id}"
   end
 
 

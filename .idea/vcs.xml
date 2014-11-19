@@ -8,6 +8,8 @@
     <mapping directory="$PROJECT_DIR$/../../git/skashmiri" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../git/skashmiri.old" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../git/skashmiri.old" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../hivehome" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../loot-cart" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../netsuite" vcs="Git" />
   </component>
 </project>

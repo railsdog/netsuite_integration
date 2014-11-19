@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$USER_HOME$/.rvm/gems/ruby-2.1.4/bundler/gems/.idea/gems.iml" filepath="$USER_HOME$/.rvm/gems/ruby-2.1.4/bundler/gems/.idea/gems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hivehome/.idea/hivehome.iml" filepath="$PROJECT_DIR$/../hivehome/.idea/hivehome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../loot-cart/.idea/loot-cart.iml" filepath="$PROJECT_DIR$/../loot-cart/.idea/loot-cart.iml" />
       <module fileurl="file://$PROJECT_DIR$/../netsuite/.idea/netsuite.iml" filepath="$PROJECT_DIR$/../netsuite/.idea/netsuite.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/netsuite_integration.iml" filepath="$PROJECT_DIR$/.idea/netsuite_integration.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../git/skashmiri.old/.idea/skashmiri.old.iml" filepath="$PROJECT_DIR$/../../git/skashmiri.old/.idea/skashmiri.old.iml" />
     </modules>
   </component>
 </project>

@@ -2,3 +2,4 @@
 netsuite.log
 .idea
 /.idea/*
+.env

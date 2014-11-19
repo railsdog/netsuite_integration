@@ -14,6 +14,8 @@ require 'netsuite_integration/services/country_service'
 require 'netsuite_integration/services/state_service'
 require 'netsuite_integration/services/item_fulfillment'
 
+require 'netsuite_integration/support/order_helper'
+
 require 'netsuite_integration/base'
 require 'netsuite_integration/customer_importer'
 require 'netsuite_integration/product'

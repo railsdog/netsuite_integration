@@ -1,7 +1,7 @@
 config_hash = {
-  'netsuite_api_version' => '2014_1',
+  'netsuite_api_version' => ENV['NETSUITE_API_VERSION'],
   'netsuite_sandbox' => false,
-  'netsuite_wsdl_url' => 'https://webservices.na1.netsuite.com/wsdl/v2014_1_0/netsuite.wsdl',
+  'netsuite_wsdl_url' => ENV['NETSUITE_WSDL_URL'],
   'netsuite_email' => ENV['NETSUITE_EMAIL'],
   'netsuite_password' => ENV['NETSUITE_PASSWORD'],
   'netsuite_account' => ENV['NETSUITE_ACCOUNT'],

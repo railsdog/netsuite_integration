@@ -70,9 +70,9 @@
             }
         ],
         "shipping_address": {
-            "firstname": "Bryce",
-            "lastname": "Travis",
-            "address1": "3624 effie st",
+            "firstname": "Aphex",
+            "lastname": "Twin",
+            "address1": "999 synth st",
             "address2": "",
             "zipcode": "90026",
             "city": "Los angeles",
@@ -82,9 +82,9 @@
             "state_abbr": "CA"
         },
         "billing_address": {
-            "firstname": "Bryce",
-            "lastname": "Travis",
-            "address1": "3624 effie st",
+            "firstname": "Aphex",
+            "lastname": "Twin",
+            "address1": "999 synth st",
             "address2": "",
             "zipcode": "90026",
             "city": "Los angeles",
