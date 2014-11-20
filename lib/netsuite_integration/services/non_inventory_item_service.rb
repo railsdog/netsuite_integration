@@ -13,10 +13,13 @@ module NetsuiteIntegration
 
           handle_extra_attributes new_item, extra_fields || {}
 
+          puts "#TS Creating New NetSuite::Records::NonInventorySaleItem called : #{name}"
+
           if new_item.add
             # unfortunately, we have to reload the object
             item = inventory_item_service.find_by_name(name)
           else
+            puts "#TS FAILED : Creating NonInventorySaleItem called : #{name}"
             @errors = new_item.errors
           end
         end
@@ -31,9 +34,13 @@ module NetsuiteIntegration
                          "#{k[0..-4]}=".to_sym
                        end
 
+          puts "[#{record.class}]"
+
           if record.respond_to? method
             record.send method, v
           elsif ref_method && record.respond_to?(ref_method)
+            puts "#TS handle extras : Create  RecordRef to [#{ref_method}] - [#{v}]"
+
             record.send ref_method, NetSuite::Records::RecordRef.new(internal_id: v)
           end
         end

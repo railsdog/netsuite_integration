@@ -18,11 +18,11 @@
         },
         "adjustments": [
             {
-                "name": "tax",
+                "name": "Tax",
                 "value": 0
             },
             {
-                "name": "shipping",
+                "name": "Shipping",
                 "value": 0
             }
         ],

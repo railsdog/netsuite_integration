@@ -12,19 +12,21 @@ module NetsuiteIntegration
 
       @order_payload = payload[:order]
 
-      # TODO  do we actually need to check for an existing invoice ?
-      # @existing_invoice = invoice_service.find_by_external_id(order_payload[:number] || order_payload[:id])
-      # puts "EXISTING :#{existing_invoice} "
-
-      order_id = @order_payload['number']
-
       @invoice = NetSuite::Records::Invoice.new({  tax_rate: 0,
                                                    is_taxable: false,
-                                                   external_id: order_id
+                                                   external_id: order_reference(@order_payload)
                                                 })
     end
 
     def create
+
+       # TODO  do we actually need to check for an existing invoice ?
+      existing_invoice =  NetSuite::Records::Invoice.get({:external_id => order_reference(@order_payload)})
+      rescue NetSuite::RecordNotFound
+
+      if(existing_invoice)
+        raise NetSuite::InitializationError, "NetSuite Invoice already raised for Order \"#{order_reference(@order_payload)}\""
+      end
 
       if(config['netsuite_location_internalid'].present?)
         location = NetSuite::Records::Location.get( :internal_id => config['netsuite_location_internalid'] )
@@ -51,13 +53,23 @@ module NetsuiteIntegration
 
     private
 
+    def item_reference(item)
+      item[:name] || item[:id] || item[:product_id]
+    end
+
+
+    def order_reference(order)
+      order_payload[:number] || order_payload[:id]
+    end
+
+
     def build_item_list
 
       @item_list = []
 
       order_payload[:line_items].map do |item|
 
-        item_id= item[:name] || item[:id] || item[:product_id]
+        item_id = item_reference(item)
 
         non_inventory_item_search = NetsuiteIntegration::Services::NonInventoryItem.new(config)
 
@@ -84,7 +96,7 @@ module NetsuiteIntegration
 
       # NetSuite treats taxes and discounts as seperate line items.
 
-      ["tax", "discount", "shipping"].map do |type|
+      ["tax", "discount"].map do |type|
 
         value = order_payload[:adjustments].sum do |hash|
           if hash[:name].to_s.downcase == type.downcase

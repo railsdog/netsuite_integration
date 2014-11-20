@@ -12,7 +12,6 @@ module NetsuiteIntegration
       end
 
       def find_by_name(name)
-        puts "#TS in find_by_name #{name}"
         NetSuite::Records::InventoryItem.search({
                                                     criteria: {
                                                         basic: basic_criteria + [{ field: 'displayName', value: name, operator: 'contains' }]
