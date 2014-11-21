@@ -7,6 +7,8 @@ describe NetsuiteEndpoint do
   describe 'invoices' do
     context 'when order is new' do
 
+      let(:invoice_number) { 'RENDPOINT0002' }
+
       let(:request) do
 
         # Not in Spree so add our location ID to the config parameters
@@ -14,11 +16,14 @@ describe NetsuiteEndpoint do
 
         # loads from support/payload/<xyz>_payload.json
         payload = Factories.invoice_order_with_subscription_payload.merge(parameters: parameters )
+
+        payload['order']['number'] = invoice_number
+
         payload
       end
 
       it 'imports the invoice and returns an info notification' do
-        VCR.use_cassette('invoice/import_service', :record => :all, :allow_playback_repeats => true) do
+        VCR.use_cassette('invoice/import_service') do
           post '/add_invoice', request.to_json, auth
           expect(last_response).to be_ok
         end

@@ -152,7 +152,6 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
     invoice =  begin
      NetsuiteIntegration::Invoice.new(@config, @payload).create
     rescue => e
-      puts e.inspect
       result 500, "Failed Invoice creation in NetSuite - #{e.message}"
     end
 

@@ -89,9 +89,6 @@ module NetsuiteIntegration
 
 
     def internal_id_for(type)
-     # puts "FIND INTERNAL ID for ADJUSTMENT [#{type}] - [netsuite_item_for_#{type.pluralize}'] - (#{@config.class})"
-
-      puts "#{order_payload[:netsuite_non_inventory_fields].inspect}"
 
       name = @config.fetch("netsuite_item_for_#{type.pluralize}", "Store #{type.capitalize}")
 

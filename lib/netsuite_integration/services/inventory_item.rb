@@ -27,7 +27,6 @@ module NetsuiteIntegration
       end
 
       def find_by_name(name)
-        puts "#TS in find_by_name #{name}"
         NetSuite::Records::InventoryItem.search({
           criteria: {
             basic: [{
@@ -40,7 +39,6 @@ module NetsuiteIntegration
       end
 
       def find_by_item_id(item_id)
-        puts "#TS in find_by_item_id #{item_id}"
 
         NetSuite::Records::InventoryItem.search({
           criteria: {
@@ -80,7 +78,6 @@ module NetsuiteIntegration
 
         # We need to set bodyFieldsOnly false to grab the pricing matrix
         def search
-          puts "#TS IN inventory_item SEARCH"
           begin
 
           NetSuite::Records::InventoryItem.search({

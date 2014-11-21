@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:39:26 GMT
+      - Fri, 21 Nov 2014 11:43:22 GMT
       Server:
       - Apache
       Content-Length:
       - '5782'
       Ns-Rtimer-Composite:
-      - "-1246118905:706172746E6572732D6A61766131303031302E626F732E6E65746C65646765722E636F6D:80"
+      - "-265477673:706172746E6572732D6A61766131303031382E626F732E6E65746C65646765722E636F6D:80"
       X-Powered-By:
       - Servlet/2.5 JSP/2.1
       P3p:
@@ -1675,7 +1675,7 @@ http_interactions:
         location=\"https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1\"/>\n
         \       </port>\n    </service>\n</definitions>\n"
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:39:27 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:24 GMT
 - request:
     method: post
     uri: https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1
@@ -1685,7 +1685,7 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"
         xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
         type="role" internalId="3"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:get><platformMsgs:baseRef
-        xsi:type="platformCore:RecordRef" externalId="RTAXDISABCE" type="invoice"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
+        xsi:type="platformCore:RecordRef" externalId="RTAXDIS1247" type="invoice"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
     headers:
       Soapaction:
       - '"get"'
@@ -1705,15 +1705,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:39:27 GMT
+      - Fri, 21 Nov 2014 11:43:23 GMT
       Server:
       - Apache
-      Content-Length:
-      - '1520'
       Ns-Rtimer-Composite:
-      - 2116697696:706172746E6572732D6A61766131303031342E626F732E6E65746C65646765722E636F6D:80
+      - 631842126:706172746E6572732D6A61766131303030332E626F732E6E65746C65646765722E636F6D:80
       Set-Cookie:
-      - JSESSIONID=s2wQJnnPxv1JQNpcGls6TNV471s1BpGpw1XRx6ZcBs1Qt23JlvqrNTG4tj7RZGPZ4QvFz1SK8GLzw5CHH2zgpyFJ8kVNQ6khbkqzBhtvBJk1Kb0X1MSvw1mdG4JPyTWQ!1851917845;
+      - JSESSIONID=nKjqJvgLL9LvmVlgPZpDVx7v4L4ZtlBQrrbGfwLytGD1BZ72wrSx4MVJwTTBShC2vtn0PhWxgnpTnqvMyQ9mt0vYvKwQSrYVMqXJM9QGTJvtT24J1ZDVdpXGBJkDW72j!-1949565747;
         path=/
       - NS_VER=2014.2.0; path=/
       X-Powered-By:
@@ -1722,20 +1720,21 @@ http_interactions:
       - CP="CAO PSAa OUR BUS PUR"
       Vary:
       - User-Agent
+      Transfer-Encoding:
+      - chunked
       Content-Type:
       - text/xml; charset=utf-8
     body:
       encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_11202014834039761228076188_65a3db332ef4b</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><record internalId="1127" externalId="RTAXDISABCE" xsi:type="tranSales:Invoice" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"><tranSales:createdDate>2014-11-20T09:30:18.000-08:00</tranSales:createdDate><tranSales:lastModifiedDate>2014-11-20T09:30:18.000-08:00</tranSales:lastModifiedDate><tranSales:customForm internalId="101" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Custom Service Invoice</platformCore:name></tranSales:customForm><tranSales:entity internalId="106" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>3 Joe Smith</platformCore:name></tranSales:entity><tranSales:tranDate>2014-11-20T00:00:00.000-08:00</tranSales:tranDate><tranSales:tranId>9</tranSales:tranId><tranSales:source>Web Services</tranSales:source><tranSales:postingPeriod internalId="16" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Nov 2014</platformCore:name></tranSales:postingPeriod><tranSales:location internalId="4" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>LC Warehouse Commerce</platformCore:name></tranSales:location><tranSales:salesEffectiveDate>2014-11-20T00:00:00.000-08:00</tranSales:salesEffectiveDate><tranSales:totalCostEstimate>0.0</tranSales:totalCostEstimate><tranSales:estGrossProfit>23.07</tranSales:estGrossProfit><tranSales:estGrossProfitPercent>100.0</tranSales:estGrossProfitPercent><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:taxItem internalId="-7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>-Not Taxable-</platformCore:name></tranSales:taxItem><tranSales:taxRate>0.0</tranSales:taxRate><tranSales:toBePrinted>false</tranSales:toBePrinted><tranSales:toBeEmailed>false</tranSales:toBeEmailed><tranSales:toBeFaxed>false</tranSales:toBeFaxed><tranSales:transactionBillAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:billAddressee>Jeff Leung</platformCommon:billAddressee><platformCommon:billAddr1>123 N Broadway</platformCommon:billAddr1><platformCommon:billCity>Los Angeles</platformCommon:billCity><platformCommon:billState>CA</platformCommon:billState><platformCommon:billZip>90012</platformCommon:billZip><platformCommon:billCountry>_unitedStates</platformCommon:billCountry></tranSales:transactionBillAddress><tranSales:billAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:billAddress><tranSales:transactionShipAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:shipAddressee>Jeff Leung</platformCommon:shipAddressee><platformCommon:shipAddr1>123 N Broadway</platformCommon:shipAddr1><platformCommon:shipCity>Los Angeles</platformCommon:shipCity><platformCommon:shipState>CA</platformCommon:shipState><platformCommon:shipZip>90012</platformCommon:shipZip><platformCommon:shipCountry>_unitedStates</platformCommon:shipCountry><platformCommon:shipIsResidential>false</platformCommon:shipIsResidential></tranSales:transactionShipAddress><tranSales:shipAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:shipAddress><tranSales:subTotal>23.07</tranSales:subTotal><tranSales:revenueStatus>_inProgress</tranSales:revenueStatus><tranSales:recognizedRevenue>3.7</tranSales:recognizedRevenue><tranSales:deferredRevenue>19.37</tranSales:deferredRevenue><tranSales:discountTotal>0.0</tranSales:discountTotal><tranSales:total>23.07</tranSales:total><tranSales:status>Open</tranSales:status><tranSales:email>spree@example.com</tranSales:email><tranSales:itemList><tranSales:item><tranSales:item internalId="141" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6-Month Crate Subscription</platformCore:name></tranSales:item><tranSales:line>1</tranSales:line><tranSales:amount>19.37</tranSales:amount><tranSales:isTaxable>true</tranSales:isTaxable><tranSales:deferRevRec>false</tranSales:deferRevRec><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:revRecSchedule internalId="2" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6 Month Subscription</platformCore:name></tranSales:revRecSchedule><tranSales:revRecStartDate>2014-11-20T00:00:00.000-08:00</tranSales:revRecStartDate><tranSales:revRecEndDate>2015-04-30T00:00:00.000-07:00</tranSales:revRecEndDate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>2</tranSales:line><tranSales:amount>1.5</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>1.50</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>3</tranSales:line><tranSales:amount>2.2</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>2.20</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item></tranSales:itemList><tranSales:customFieldList xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:customField internalId="26" scriptId="custbody_esc_last_modified_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField><platformCore:customField internalId="27" scriptId="custbody_esc_created_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField></tranSales:customFieldList></record></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
+      string: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo
+        xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_112120147690045012123657933_20d18a96992f</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse
+        xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status
+        isSuccess="false" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:statusDetail
+        type="ERROR"><platformCore:code>INVALID_KEY_OR_REF</platformCore:code><platformCore:message>The
+        specified key is invalid.</platformCore:message></platformCore:statusDetail></platformCore:status></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:39:29 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:24 GMT
 - request:
     method: get
     uri: https://webservices.na1.netsuite.com/wsdl/v2014_1_0/netsuite.wsdl
@@ -1755,13 +1754,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:40:38 GMT
+      - Fri, 21 Nov 2014 11:43:23 GMT
       Server:
       - Apache
       Content-Length:
       - '5782'
       Ns-Rtimer-Composite:
-      - 337887663:706172746E6572732D6A61766131303031302E626F732E6E65746C65646765722E636F6D:80
+      - "-1147557626:706172746E6572732D6A61766131303032302E626F732E6E65746C65646765722E636F6D:80"
       X-Powered-By:
       - Servlet/2.5 JSP/2.1
       P3p:
@@ -3411,7 +3410,7 @@ http_interactions:
         location=\"https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1\"/>\n
         \       </port>\n    </service>\n</definitions>\n"
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:40:38 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:25 GMT
 - request:
     method: post
     uri: https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1
@@ -3421,14 +3420,14 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"
         xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
         type="role" internalId="3"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:get><platformMsgs:baseRef
-        xsi:type="platformCore:RecordRef" externalId="RTAXDISABCE" type="invoice"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
+        xsi:type="platformCore:RecordRef" internalId="4" type="location"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
     headers:
       Soapaction:
       - '"get"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '850'
+      - '841'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -3441,15 +3440,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:40:38 GMT
+      - Fri, 21 Nov 2014 11:43:24 GMT
       Server:
       - Apache
       Content-Length:
-      - '1518'
+      - '646'
       Ns-Rtimer-Composite:
-      - 1672812823:706172746E6572732D6A61766131303031342E626F732E6E65746C65646765722E636F6D:80
+      - 548781848:706172746E6572732D6A61766131303030332E626F732E6E65746C65646765722E636F6D:80
       Set-Cookie:
-      - JSESSIONID=zQ6qJnnWLQCNnZQ2kPxST0kHGplyRQM0WxDXtZWPXNQYB2wDDGHLPl4NdQcWqpYjLjVfxw5dMfXdQnYDFq7K0TfkZptrLMgScNYk0yLb7X1BRHrvnkH27pY0yvRH36JT!1851917845;
+      - JSESSIONID=vFk5JvgKNGvnnhTVpLKsCnv87rSs1CT6rp91RJ2QldLJWTDHTzyhMYhny8q4XGYWhr9qjfxpcBwYGVbzHXhv1hmyrvqVJqNWbn6VWl6vTV2S90vlzkGHxQkhsTW5ZFyG!-1949565747;
         path=/
       - NS_VER=2014.2.0; path=/
       X-Powered-By:
@@ -3463,15 +3462,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: |-
-        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_112020148339680382050483888_6598b6807ab0</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><record internalId="1127" externalId="RTAXDISABCE" xsi:type="tranSales:Invoice" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"><tranSales:createdDate>2014-11-20T09:30:18.000-08:00</tranSales:createdDate><tranSales:lastModifiedDate>2014-11-20T09:30:18.000-08:00</tranSales:lastModifiedDate><tranSales:customForm internalId="101" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Custom Service Invoice</platformCore:name></tranSales:customForm><tranSales:entity internalId="106" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>3 Joe Smith</platformCore:name></tranSales:entity><tranSales:tranDate>2014-11-20T00:00:00.000-08:00</tranSales:tranDate><tranSales:tranId>9</tranSales:tranId><tranSales:source>Web Services</tranSales:source><tranSales:postingPeriod internalId="16" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Nov 2014</platformCore:name></tranSales:postingPeriod><tranSales:location internalId="4" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>LC Warehouse Commerce</platformCore:name></tranSales:location><tranSales:salesEffectiveDate>2014-11-20T00:00:00.000-08:00</tranSales:salesEffectiveDate><tranSales:totalCostEstimate>0.0</tranSales:totalCostEstimate><tranSales:estGrossProfit>23.07</tranSales:estGrossProfit><tranSales:estGrossProfitPercent>100.0</tranSales:estGrossProfitPercent><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:taxItem internalId="-7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>-Not Taxable-</platformCore:name></tranSales:taxItem><tranSales:taxRate>0.0</tranSales:taxRate><tranSales:toBePrinted>false</tranSales:toBePrinted><tranSales:toBeEmailed>false</tranSales:toBeEmailed><tranSales:toBeFaxed>false</tranSales:toBeFaxed><tranSales:transactionBillAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:billAddressee>Jeff Leung</platformCommon:billAddressee><platformCommon:billAddr1>123 N Broadway</platformCommon:billAddr1><platformCommon:billCity>Los Angeles</platformCommon:billCity><platformCommon:billState>CA</platformCommon:billState><platformCommon:billZip>90012</platformCommon:billZip><platformCommon:billCountry>_unitedStates</platformCommon:billCountry></tranSales:transactionBillAddress><tranSales:billAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:billAddress><tranSales:transactionShipAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:shipAddressee>Jeff Leung</platformCommon:shipAddressee><platformCommon:shipAddr1>123 N Broadway</platformCommon:shipAddr1><platformCommon:shipCity>Los Angeles</platformCommon:shipCity><platformCommon:shipState>CA</platformCommon:shipState><platformCommon:shipZip>90012</platformCommon:shipZip><platformCommon:shipCountry>_unitedStates</platformCommon:shipCountry><platformCommon:shipIsResidential>false</platformCommon:shipIsResidential></tranSales:transactionShipAddress><tranSales:shipAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:shipAddress><tranSales:subTotal>23.07</tranSales:subTotal><tranSales:revenueStatus>_inProgress</tranSales:revenueStatus><tranSales:recognizedRevenue>3.7</tranSales:recognizedRevenue><tranSales:deferredRevenue>19.37</tranSales:deferredRevenue><tranSales:discountTotal>0.0</tranSales:discountTotal><tranSales:total>23.07</tranSales:total><tranSales:status>Open</tranSales:status><tranSales:email>spree@example.com</tranSales:email><tranSales:itemList><tranSales:item><tranSales:item internalId="141" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6-Month Crate Subscription</platformCore:name></tranSales:item><tranSales:line>1</tranSales:line><tranSales:amount>19.37</tranSales:amount><tranSales:isTaxable>true</tranSales:isTaxable><tranSales:deferRevRec>false</tranSales:deferRevRec><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:revRecSchedule internalId="2" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6 Month Subscription</platformCore:name></tranSales:revRecSchedule><tranSales:revRecStartDate>2014-11-20T00:00:00.000-08:00</tranSales:revRecStartDate><tranSales:revRecEndDate>2015-04-30T00:00:00.000-07:00</tranSales:revRecEndDate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>2</tranSales:line><tranSales:amount>1.5</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>1.50</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>3</tranSales:line><tranSales:amount>2.2</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>2.20</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item></tranSales:itemList><tranSales:customFieldList xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:customField internalId="26" scriptId="custbody_esc_last_modified_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField><platformCore:customField internalId="27" scriptId="custbody_esc_created_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField></tranSales:customFieldList></record></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
+        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_11212014769003523435816532_98b1e3f80d015</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><record internalId="4" xsi:type="listAcct:Location" xmlns:listAcct="urn:accounting_2014_1.lists.webservices.netsuite.com"><listAcct:name>LC Warehouse Commerce</listAcct:name><listAcct:isInactive>false</listAcct:isInactive><listAcct:addressee>Loot Crate Warehouse Commerce</listAcct:addressee><listAcct:addrPhone>4083759581</listAcct:addrPhone><listAcct:addr1>5630 Rickenbacker RD</listAcct:addr1><listAcct:city>Commerce</listAcct:city><listAcct:state>CA</listAcct:state><listAcct:zip>90040</listAcct:zip><listAcct:country>_unitedStates</listAcct:country><listAcct:addrText>Loot Crate Warehouse Commerce
+        5630 Rickenbacker RD
+        Commerce CA 90040
+        United States</listAcct:addrText><listAcct:override>false</listAcct:override><listAcct:makeInventoryAvailable>true</listAcct:makeInventoryAvailable><listAcct:makeInventoryAvailableStore>true</listAcct:makeInventoryAvailableStore></record></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:40:40 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:26 GMT
 - request:
     method: get
     uri: https://webservices.na1.netsuite.com/wsdl/v2014_1_0/netsuite.wsdl
@@ -3491,13 +3487,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:41:03 GMT
+      - Fri, 21 Nov 2014 11:43:24 GMT
       Server:
       - Apache
       Content-Length:
       - '5782'
       Ns-Rtimer-Composite:
-      - 1675323008:706172746E6572732D6A61766131303032302E626F732E6E65746C65646765722E636F6D:80
+      - 551759830:706172746E6572732D6A61766131303030322E626F732E6E65746C65646765722E636F6D:80
       X-Powered-By:
       - Servlet/2.5 JSP/2.1
       P3p:
@@ -5147,7 +5143,7 @@ http_interactions:
         location=\"https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1\"/>\n
         \       </port>\n    </service>\n</definitions>\n"
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:41:03 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:26 GMT
 - request:
     method: post
     uri: https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1
@@ -5157,14 +5153,14 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"
         xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
         type="role" internalId="3"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:get><platformMsgs:baseRef
-        xsi:type="platformCore:RecordRef" externalId="RTAXDISABCE" type="invoice"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
+        xsi:type="platformCore:RecordRef" externalId="spree@example.com" type="customer"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
     headers:
       Soapaction:
       - '"get"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '850'
+      - '857'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -5177,15 +5173,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:41:03 GMT
+      - Fri, 21 Nov 2014 11:43:25 GMT
       Server:
       - Apache
       Content-Length:
-      - '1519'
+      - '1820'
       Ns-Rtimer-Composite:
-      - 341116907:706172746E6572732D6A61766131303031342E626F732E6E65746C65646765722E636F6D:80
+      - 569166991:706172746E6572732D6A61766131303030332E626F732E6E65746C65646765722E636F6D:80
       Set-Cookie:
-      - JSESSIONID=yl65JnnPMn831hpRL7c4141Gvn0J1ZZG5MZLvts1lKfPQGVTnnKJlVpNJG9rXqnyD2SqF2C7tnwbCYzhXwGQy36bvGGLn9p0J1X8R2Ndx8r0pVfThFp6tZvBHqDGL7MY!1851917845;
+      - JSESSIONID=R5CbJvgdk6VQyXVfJ7nKxymTQLv8JccqSM3yGk9GxC0XsnJvXmvXrBCljpSj205nYSwp1p2BCBL3JpQDKfF19HZD61BSXhL44wT0qcT17LGv2hGL8MVHBGpQlvsYJ9cv!-1949565747;
         path=/
       - NS_VER=2014.2.0; path=/
       X-Powered-By:
@@ -5199,15 +5195,43 @@ http_interactions:
     body:
       encoding: UTF-8
       string: |-
-        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_11202014833943233949617812_52bb5675c01f2</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><record internalId="1127" externalId="RTAXDISABCE" xsi:type="tranSales:Invoice" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"><tranSales:createdDate>2014-11-20T09:30:18.000-08:00</tranSales:createdDate><tranSales:lastModifiedDate>2014-11-20T09:30:18.000-08:00</tranSales:lastModifiedDate><tranSales:customForm internalId="101" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Custom Service Invoice</platformCore:name></tranSales:customForm><tranSales:entity internalId="106" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>3 Joe Smith</platformCore:name></tranSales:entity><tranSales:tranDate>2014-11-20T00:00:00.000-08:00</tranSales:tranDate><tranSales:tranId>9</tranSales:tranId><tranSales:source>Web Services</tranSales:source><tranSales:postingPeriod internalId="16" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Nov 2014</platformCore:name></tranSales:postingPeriod><tranSales:location internalId="4" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>LC Warehouse Commerce</platformCore:name></tranSales:location><tranSales:salesEffectiveDate>2014-11-20T00:00:00.000-08:00</tranSales:salesEffectiveDate><tranSales:totalCostEstimate>0.0</tranSales:totalCostEstimate><tranSales:estGrossProfit>23.07</tranSales:estGrossProfit><tranSales:estGrossProfitPercent>100.0</tranSales:estGrossProfitPercent><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:taxItem internalId="-7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>-Not Taxable-</platformCore:name></tranSales:taxItem><tranSales:taxRate>0.0</tranSales:taxRate><tranSales:toBePrinted>false</tranSales:toBePrinted><tranSales:toBeEmailed>false</tranSales:toBeEmailed><tranSales:toBeFaxed>false</tranSales:toBeFaxed><tranSales:transactionBillAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:billAddressee>Jeff Leung</platformCommon:billAddressee><platformCommon:billAddr1>123 N Broadway</platformCommon:billAddr1><platformCommon:billCity>Los Angeles</platformCommon:billCity><platformCommon:billState>CA</platformCommon:billState><platformCommon:billZip>90012</platformCommon:billZip><platformCommon:billCountry>_unitedStates</platformCommon:billCountry></tranSales:transactionBillAddress><tranSales:billAddress>Jeff Leung
+        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_112120147690021591304357638_12325c23725b</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><record internalId="106" externalId="spree@example.com" xsi:type="listRel:Customer" xmlns:listRel="urn:relationships_2014_1.lists.webservices.netsuite.com"><listRel:customForm internalId="-2" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Standard Customer Form</platformCore:name></listRel:customForm><listRel:entityId>3 Joe Smith</listRel:entityId><listRel:isPerson>true</listRel:isPerson><listRel:firstName>Joe</listRel:firstName><listRel:lastName>Smith</listRel:lastName><listRel:entityStatus internalId="13" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>CUSTOMER-Closed Won</platformCore:name></listRel:entityStatus><listRel:phone>0000000000</listRel:phone><listRel:email>spree@example.com</listRel:email><listRel:defaultAddress>3 Joe Smith
         123 N Broadway
         Los Angeles CA 90012
-        United States</tranSales:billAddress><tranSales:transactionShipAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:shipAddressee>Jeff Leung</platformCommon:shipAddressee><platformCommon:shipAddr1>123 N Broadway</platformCommon:shipAddr1><platformCommon:shipCity>Los Angeles</platformCommon:shipCity><platformCommon:shipState>CA</platformCommon:shipState><platformCommon:shipZip>90012</platformCommon:shipZip><platformCommon:shipCountry>_unitedStates</platformCommon:shipCountry><platformCommon:shipIsResidential>false</platformCommon:shipIsResidential></tranSales:transactionShipAddress><tranSales:shipAddress>Jeff Leung
+        United States</listRel:defaultAddress><listRel:isInactive>false</listRel:isInactive><listRel:dateCreated>2014-09-26T17:45:22.000-07:00</listRel:dateCreated><listRel:emailPreference>_default</listRel:emailPreference><listRel:taxExempt>true</listRel:taxExempt><listRel:creditHoldOverride>_auto</listRel:creditHoldOverride><listRel:overrideCurrencyFormat>false</listRel:overrideCurrencyFormat><listRel:displaySymbol>$</listRel:displaySymbol><listRel:symbolPlacement>_beforeNumber</listRel:symbolPlacement><listRel:balance>2235.15</listRel:balance><listRel:overdueBalance>1106.04</listRel:overdueBalance><listRel:daysOverdue>4</listRel:daysOverdue><listRel:unbilledOrders>0.0</listRel:unbilledOrders><listRel:depositBalance>0.0</listRel:depositBalance><listRel:shipComplete>false</listRel:shipComplete><listRel:taxable>false</listRel:taxable><listRel:giveAccess>false</listRel:giveAccess><listRel:accessRole internalId="14" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Customer Center</platformCore:name></listRel:accessRole><listRel:sendEmail>false</listRel:sendEmail><listRel:receivablesAccount internalId="-10" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Use System Preference</platformCore:name></listRel:receivablesAccount><listRel:webLead>No</listRel:webLead><listRel:lastModifiedDate>2014-11-19T07:55:17.000-08:00</listRel:lastModifiedDate><listRel:stage>_customer</listRel:stage><listRel:emailTransactions>false</listRel:emailTransactions><listRel:printTransactions>false</listRel:printTransactions><listRel:faxTransactions>false</listRel:faxTransactions><listRel:isBudgetApproved>false</listRel:isBudgetApproved><listRel:addressbookList><listRel:addressbook><listRel:defaultShipping>true</listRel:defaultShipping><listRel:defaultBilling>true</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>123 N Broadway</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:addr1>123 N Broadway</listRel:addr1><listRel:city>Los Angeles</listRel:city><listRel:zip>90012</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
         123 N Broadway
         Los Angeles CA 90012
-        United States</tranSales:shipAddress><tranSales:subTotal>23.07</tranSales:subTotal><tranSales:revenueStatus>_inProgress</tranSales:revenueStatus><tranSales:recognizedRevenue>3.7</tranSales:recognizedRevenue><tranSales:deferredRevenue>19.37</tranSales:deferredRevenue><tranSales:discountTotal>0.0</tranSales:discountTotal><tranSales:total>23.07</tranSales:total><tranSales:status>Open</tranSales:status><tranSales:email>spree@example.com</tranSales:email><tranSales:itemList><tranSales:item><tranSales:item internalId="141" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6-Month Crate Subscription</platformCore:name></tranSales:item><tranSales:line>1</tranSales:line><tranSales:amount>19.37</tranSales:amount><tranSales:isTaxable>true</tranSales:isTaxable><tranSales:deferRevRec>false</tranSales:deferRevRec><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:revRecSchedule internalId="2" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6 Month Subscription</platformCore:name></tranSales:revRecSchedule><tranSales:revRecStartDate>2014-11-20T00:00:00.000-08:00</tranSales:revRecStartDate><tranSales:revRecEndDate>2015-04-30T00:00:00.000-07:00</tranSales:revRecEndDate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>2</tranSales:line><tranSales:amount>1.5</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>1.50</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>3</tranSales:line><tranSales:amount>2.2</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>2.20</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item></tranSales:itemList><tranSales:customFieldList xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:customField internalId="26" scriptId="custbody_esc_last_modified_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField><platformCore:customField internalId="27" scriptId="custbody_esc_created_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField></tranSales:customFieldList></record></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2211</listRel:internalId><listRel:state>CA</listRel:state></listRel:addressbook><listRel:addressbook><listRel:defaultShipping>false</listRel:defaultShipping><listRel:defaultBilling>false</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>999 synth st</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:addr1>999 synth st</listRel:addr1><listRel:city>Los angeles</listRel:city><listRel:zip>90026</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
+        999 synth st
+        Los angeles CA 90026
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2212</listRel:internalId><listRel:state>CA</listRel:state></listRel:addressbook><listRel:addressbook><listRel:defaultShipping>false</listRel:defaultShipping><listRel:defaultBilling>false</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>3624 effie st</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:addr1>3624 effie st</listRel:addr1><listRel:city>Los angeles</listRel:city><listRel:zip>90026</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
+        3624 effie st
+        Los angeles CA 90026
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2213</listRel:internalId><listRel:state>CA</listRel:state></listRel:addressbook><listRel:addressbook><listRel:defaultShipping>false</listRel:defaultShipping><listRel:defaultBilling>false</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>3624</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:addr1>3624</listRel:addr1><listRel:city>Los Angeles</listRel:city><listRel:zip>90026</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
+        3624
+        Los Angeles CA 90026
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2214</listRel:internalId><listRel:state>CA</listRel:state></listRel:addressbook><listRel:addressbook><listRel:defaultShipping>false</listRel:defaultShipping><listRel:defaultBilling>false</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>5445 Collins Avenue</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:phone>6199383741</listRel:phone><listRel:addr1>5445 Collins Avenue</listRel:addr1><listRel:addr2>Pavilion ! ( 319589) condo</listRel:addr2><listRel:city>Miami Beach</listRel:city><listRel:zip>92040</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
+        5445 Collins Avenue
+        Pavilion ! ( 319589) condo
+        Miami Beach FL 92040
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2215</listRel:internalId><listRel:state>FL</listRel:state></listRel:addressbook><listRel:addressbook><listRel:defaultShipping>false</listRel:defaultShipping><listRel:defaultBilling>false</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>5445 Collins Avenue</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:phone>6199383741</listRel:phone><listRel:addr1>5445 Collins Avenue</listRel:addr1><listRel:city>San Francisco</listRel:city><listRel:zip>92040</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
+        5445 Collins Avenue
+        San Francisco FL 92040
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2216</listRel:internalId><listRel:state>FL</listRel:state></listRel:addressbook><listRel:addressbook><listRel:defaultShipping>false</listRel:defaultShipping><listRel:defaultBilling>false</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>123 Fake St</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:phone>213213232321</listRel:phone><listRel:addr1>123 Fake St</listRel:addr1><listRel:city>asdsasa</listRel:city><listRel:zip>213122</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
+        123 Fake St
+        asdsasa CA 213122
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2217</listRel:internalId><listRel:state>CA</listRel:state></listRel:addressbook><listRel:addressbook><listRel:defaultShipping>false</listRel:defaultShipping><listRel:defaultBilling>false</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>3624 Effie St</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:addr1>3624 Effie St</listRel:addr1><listRel:city>Los Angeles</listRel:city><listRel:zip>90026</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
+        3624 Effie St
+        Los Angeles CA 90026
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2218</listRel:internalId><listRel:state>CA</listRel:state></listRel:addressbook><listRel:addressbook><listRel:defaultShipping>false</listRel:defaultShipping><listRel:defaultBilling>false</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>3624 Effie St</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:phone>2063555027</listRel:phone><listRel:addr1>3624 Effie St</listRel:addr1><listRel:city>Los Angeles</listRel:city><listRel:zip>90026</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
+        3624 Effie St
+        Los Angeles CA 90026
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2219</listRel:internalId><listRel:state>CA</listRel:state></listRel:addressbook><listRel:addressbook><listRel:defaultShipping>false</listRel:defaultShipping><listRel:defaultBilling>false</listRel:defaultBilling><listRel:isResidential>false</listRel:isResidential><listRel:label>1234 Awesome Street</listRel:label><listRel:addressee>3 Joe Smith</listRel:addressee><listRel:phone>0000000000</listRel:phone><listRel:addr1>1234 Awesome Street</listRel:addr1><listRel:city>Hollywood</listRel:city><listRel:zip>90210</listRel:zip><listRel:country>_unitedStates</listRel:country><listRel:addrText>3 Joe Smith
+        1234 Awesome Street
+        Hollywood CA 90210
+        United States</listRel:addrText><listRel:override>false</listRel:override><listRel:internalId>2220</listRel:internalId><listRel:state>CA</listRel:state></listRel:addressbook></listRel:addressbookList><listRel:contactRolesList><listRel:contactRoles><listRel:giveAccess>false</listRel:giveAccess><listRel:contact internalId="106" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>3</platformCore:name></listRel:contact><listRel:email>spree@example.com</listRel:email><listRel:role internalId="14" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Customer Center</platformCore:name></listRel:role><listRel:sendEmail>false</listRel:sendEmail></listRel:contactRoles></listRel:contactRolesList><listRel:customFieldList xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:customField internalId="25" scriptId="custentity_esc_last_modified_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-19T00:00:00.000-08:00</platformCore:value></platformCore:customField></listRel:customFieldList></record></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:41:05 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:28 GMT
 - request:
     method: get
     uri: https://webservices.na1.netsuite.com/wsdl/v2014_1_0/netsuite.wsdl
@@ -5227,13 +5251,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:41:31 GMT
+      - Fri, 21 Nov 2014 11:43:27 GMT
       Server:
       - Apache
       Content-Length:
       - '5782'
       Ns-Rtimer-Composite:
-      - "-798908237:706172746E6572732D6A61766131303031372E626F732E6E65746C65646765722E636F6D:80"
+      - 569165448:706172746E6572732D6A61766131303030332E626F732E6E65746C65646765722E636F6D:80
       X-Powered-By:
       - Servlet/2.5 JSP/2.1
       P3p:
@@ -6883,7 +6907,7 @@ http_interactions:
         location=\"https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1\"/>\n
         \       </port>\n    </service>\n</definitions>\n"
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:41:32 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:29 GMT
 - request:
     method: post
     uri: https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1
@@ -6891,16 +6915,24 @@ http_interactions:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
-        type="role" internalId="3"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:get><platformMsgs:baseRef
-        xsi:type="platformCore:RecordRef" externalId="RTAXDISABCE" type="invoice"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"
+        xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"
+        xmlns:listRel="urn:relationships_2014_1.lists.webservices.netsuite.com" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"
+        xmlns:actSched="urn:scheduling_2014_1.activities.webservices.netsuite.com"
+        xmlns:setupCustom="urn:customization_2014_1.setup.webservices.netsuite.com"
+        xmlns:listAcct="urn:accounting_2014_1.lists.webservices.netsuite.com" xmlns:tranBank="urn:bank_2014_1.transactions.webservices.netsuite.com"
+        xmlns:tranCust="urn:customers_2014_1.transactions.webservices.netsuite.com"
+        xmlns:listSupport="urn:support_2014_1.lists.webservices.netsuite.com" xmlns:tranGeneral="urn:general_2014_1.transactions.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
+        type="role" internalId="3"></platformCore:role></platformMsgs:passport><platformMsgs:SearchPreferences><pageSize>80</pageSize><bodyFieldsOnly>false</bodyFieldsOnly></platformMsgs:SearchPreferences></env:Header><env:Body><platformMsgs:search><platformMsgs:searchRecord
+        xsi:type="listAcct:ItemSearch"><listAcct:basic><platformCommon:type operator="anyOf"><platformCore:searchValue>_nonInventoryItem</platformCore:searchValue></platformCommon:type><platformCommon:isInactive><platformCore:searchValue>false</platformCore:searchValue></platformCommon:isInactive><platformCommon:displayName
+        operator="contains"><platformCore:searchValue>6-Month Crate Subscription</platformCore:searchValue></platformCommon:displayName></listAcct:basic></platformMsgs:searchRecord></platformMsgs:search></env:Body></env:Envelope>
     headers:
       Soapaction:
-      - '"get"'
+      - '"search"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '850'
+      - '2116'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -6913,15 +6945,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:41:32 GMT
+      - Fri, 21 Nov 2014 11:43:27 GMT
       Server:
       - Apache
       Content-Length:
-      - '1520'
+      - '990'
       Ns-Rtimer-Composite:
-      - 629203870:706172746E6572732D6A61766131303031342E626F732E6E65746C65646765722E636F6D:80
+      - 613342487:706172746E6572732D6A61766131303030332E626F732E6E65746C65646765722E636F6D:80
       Set-Cookie:
-      - JSESSIONID=BmmhJnlYqpGfT4cH1Wf8sB1KnhMyn5sCSXTMch8hJjNZzVq2DyGmFJRhxZWKJyHVs5LF5yRt2G8clZKJsrFHFpGgvCStTMkT4vHx82LlNpn217npSdF0GkryndBLYl6L!1851917845;
+      - JSESSIONID=R5CbJvgdk6VQyXVfJ7nKxymTQLv8JccqSM3yGk9GxC0XsnJvXmvXrBCljpSj205nYSwp1p2BCBL3JpQDKfF19HZD61BSXhL44wT0qcT17LGv2hGL8MVHBGpQlvsYJ9cv!-1949565747;
         path=/
       - NS_VER=2014.2.0; path=/
       X-Powered-By:
@@ -6934,16 +6966,22 @@ http_interactions:
       - text/xml; charset=utf-8
     body:
       encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_112020148339152991571404328_986b16add37a</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><record internalId="1127" externalId="RTAXDISABCE" xsi:type="tranSales:Invoice" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"><tranSales:createdDate>2014-11-20T09:30:18.000-08:00</tranSales:createdDate><tranSales:lastModifiedDate>2014-11-20T09:30:18.000-08:00</tranSales:lastModifiedDate><tranSales:customForm internalId="101" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Custom Service Invoice</platformCore:name></tranSales:customForm><tranSales:entity internalId="106" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>3 Joe Smith</platformCore:name></tranSales:entity><tranSales:tranDate>2014-11-20T00:00:00.000-08:00</tranSales:tranDate><tranSales:tranId>9</tranSales:tranId><tranSales:source>Web Services</tranSales:source><tranSales:postingPeriod internalId="16" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Nov 2014</platformCore:name></tranSales:postingPeriod><tranSales:location internalId="4" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>LC Warehouse Commerce</platformCore:name></tranSales:location><tranSales:salesEffectiveDate>2014-11-20T00:00:00.000-08:00</tranSales:salesEffectiveDate><tranSales:totalCostEstimate>0.0</tranSales:totalCostEstimate><tranSales:estGrossProfit>23.07</tranSales:estGrossProfit><tranSales:estGrossProfitPercent>100.0</tranSales:estGrossProfitPercent><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:taxItem internalId="-7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>-Not Taxable-</platformCore:name></tranSales:taxItem><tranSales:taxRate>0.0</tranSales:taxRate><tranSales:toBePrinted>false</tranSales:toBePrinted><tranSales:toBeEmailed>false</tranSales:toBeEmailed><tranSales:toBeFaxed>false</tranSales:toBeFaxed><tranSales:transactionBillAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:billAddressee>Jeff Leung</platformCommon:billAddressee><platformCommon:billAddr1>123 N Broadway</platformCommon:billAddr1><platformCommon:billCity>Los Angeles</platformCommon:billCity><platformCommon:billState>CA</platformCommon:billState><platformCommon:billZip>90012</platformCommon:billZip><platformCommon:billCountry>_unitedStates</platformCommon:billCountry></tranSales:transactionBillAddress><tranSales:billAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:billAddress><tranSales:transactionShipAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:shipAddressee>Jeff Leung</platformCommon:shipAddressee><platformCommon:shipAddr1>123 N Broadway</platformCommon:shipAddr1><platformCommon:shipCity>Los Angeles</platformCommon:shipCity><platformCommon:shipState>CA</platformCommon:shipState><platformCommon:shipZip>90012</platformCommon:shipZip><platformCommon:shipCountry>_unitedStates</platformCommon:shipCountry><platformCommon:shipIsResidential>false</platformCommon:shipIsResidential></tranSales:transactionShipAddress><tranSales:shipAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:shipAddress><tranSales:subTotal>23.07</tranSales:subTotal><tranSales:revenueStatus>_inProgress</tranSales:revenueStatus><tranSales:recognizedRevenue>3.7</tranSales:recognizedRevenue><tranSales:deferredRevenue>19.37</tranSales:deferredRevenue><tranSales:discountTotal>0.0</tranSales:discountTotal><tranSales:total>23.07</tranSales:total><tranSales:status>Open</tranSales:status><tranSales:email>spree@example.com</tranSales:email><tranSales:itemList><tranSales:item><tranSales:item internalId="141" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6-Month Crate Subscription</platformCore:name></tranSales:item><tranSales:line>1</tranSales:line><tranSales:amount>19.37</tranSales:amount><tranSales:isTaxable>true</tranSales:isTaxable><tranSales:deferRevRec>false</tranSales:deferRevRec><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:revRecSchedule internalId="2" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6 Month Subscription</platformCore:name></tranSales:revRecSchedule><tranSales:revRecStartDate>2014-11-20T00:00:00.000-08:00</tranSales:revRecStartDate><tranSales:revRecEndDate>2015-04-30T00:00:00.000-07:00</tranSales:revRecEndDate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>2</tranSales:line><tranSales:amount>1.5</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>1.50</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>3</tranSales:line><tranSales:amount>2.2</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>2.20</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item></tranSales:itemList><tranSales:customFieldList xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:customField internalId="26" scriptId="custbody_esc_last_modified_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField><platformCore:customField internalId="27" scriptId="custbody_esc_created_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField></tranSales:customFieldList></record></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
+      string: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo
+        xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_112120147689996811266662589_97549ab333a3</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><searchResponse
+        xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><platformCore:searchResult
+        xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:status
+        isSuccess="true"/><platformCore:totalRecords>1</platformCore:totalRecords><platformCore:pageSize>80</platformCore:pageSize><platformCore:totalPages>1</platformCore:totalPages><platformCore:pageIndex>1</platformCore:pageIndex><platformCore:searchId>WEBSERVICES_NETSUITE_ACCOUNT_112120147689996811266662589_97549ab333a3</platformCore:searchId><platformCore:recordList><platformCore:record
+        internalId="141" xsi:type="listAcct:NonInventorySaleItem" xmlns:listAcct="urn:accounting_2014_1.lists.webservices.netsuite.com"><listAcct:createdDate>2014-10-20T14:10:56.000-07:00</listAcct:createdDate><listAcct:lastModifiedDate>2014-11-17T15:56:43.000-08:00</listAcct:lastModifiedDate><listAcct:incomeAccount
+        internalId="54"><platformCore:name>4000 Sales</platformCore:name></listAcct:incomeAccount><listAcct:taxSchedule
+        internalId="1"><platformCore:name>S1</platformCore:name></listAcct:taxSchedule><listAcct:costEstimateType>_itemDefinedCost</listAcct:costEstimateType><listAcct:deferredRevenueAccount
+        internalId="127"><platformCore:name>Deferred Revenue</platformCore:name></listAcct:deferredRevenueAccount><listAcct:revRecSchedule
+        internalId="2"><platformCore:name>6 Month Subscription</platformCore:name></listAcct:revRecSchedule><listAcct:enforceMinQtyInternally>true</listAcct:enforceMinQtyInternally><listAcct:isFulfillable>true</listAcct:isFulfillable><listAcct:overallQuantityPricingType>_byLineQuantity</listAcct:overallQuantityPricingType><listAcct:excludeFromSitemap>false</listAcct:excludeFromSitemap><listAcct:sitemapPriority>_auto</listAcct:sitemapPriority><listAcct:isDonationItem>false</listAcct:isDonationItem><listAcct:showDefaultDonationAmount>false</listAcct:showDefaultDonationAmount><listAcct:dontShowPrice>false</listAcct:dontShowPrice><listAcct:itemId>6-Month
+        Crate Subscription</listAcct:itemId><listAcct:displayName>6-Month Crate Subscription</listAcct:displayName><listAcct:isOnline>false</listAcct:isOnline><listAcct:isInactive>false</listAcct:isInactive><listAcct:customFieldList><platformCore:customField
+        internalId="34" scriptId="custitem_shop_crate" xsi:type="platformCore:SelectCustomFieldRef"><platformCore:value
+        internalId="2" typeId="7"><platformCore:name>Crate</platformCore:name></platformCore:value></platformCore:customField></listAcct:customFieldList></platformCore:record></platformCore:recordList></platformCore:searchResult></searchResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:41:33 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:30 GMT
 - request:
     method: get
     uri: https://webservices.na1.netsuite.com/wsdl/v2014_1_0/netsuite.wsdl
@@ -6963,13 +7001,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:44:26 GMT
+      - Fri, 21 Nov 2014 11:43:28 GMT
       Server:
       - Apache
       Content-Length:
       - '5782'
       Ns-Rtimer-Composite:
-      - 589870955:706172746E6572732D6A61766131303030342E626F732E6E65746C65646765722E636F6D:80
+      - 328199182:706172746E6572732D6A61766131303031322E626F732E6E65746C65646765722E636F6D:80
       X-Powered-By:
       - Servlet/2.5 JSP/2.1
       P3p:
@@ -8619,7 +8657,7 @@ http_interactions:
         location=\"https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1\"/>\n
         \       </port>\n    </service>\n</definitions>\n"
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:44:26 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:30 GMT
 - request:
     method: post
     uri: https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1
@@ -8627,16 +8665,24 @@ http_interactions:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
-        type="role" internalId="3"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:get><platformMsgs:baseRef
-        xsi:type="platformCore:RecordRef" externalId="RTAXDISABCE" type="invoice"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"
+        xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"
+        xmlns:listRel="urn:relationships_2014_1.lists.webservices.netsuite.com" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"
+        xmlns:actSched="urn:scheduling_2014_1.activities.webservices.netsuite.com"
+        xmlns:setupCustom="urn:customization_2014_1.setup.webservices.netsuite.com"
+        xmlns:listAcct="urn:accounting_2014_1.lists.webservices.netsuite.com" xmlns:tranBank="urn:bank_2014_1.transactions.webservices.netsuite.com"
+        xmlns:tranCust="urn:customers_2014_1.transactions.webservices.netsuite.com"
+        xmlns:listSupport="urn:support_2014_1.lists.webservices.netsuite.com" xmlns:tranGeneral="urn:general_2014_1.transactions.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
+        type="role" internalId="3"></platformCore:role></platformMsgs:passport><platformMsgs:SearchPreferences></platformMsgs:SearchPreferences></env:Header><env:Body><platformMsgs:search><platformMsgs:searchRecord
+        xsi:type="listAcct:ItemSearch"><listAcct:basic><platformCommon:displayName
+        operator="contains"><platformCore:searchValue>Spree Taxes</platformCore:searchValue></platformCommon:displayName></listAcct:basic></platformMsgs:searchRecord></platformMsgs:search></env:Body></env:Envelope>
     headers:
       Soapaction:
-      - '"get"'
+      - '"search"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '850'
+      - '1797'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -8649,15 +8695,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:44:26 GMT
+      - Fri, 21 Nov 2014 11:43:29 GMT
       Server:
       - Apache
       Content-Length:
-      - '1520'
+      - '858'
       Ns-Rtimer-Composite:
-      - "-1134566925:706172746E6572732D6A61766131303031342E626F732E6E65746C65646765722E636F6D:80"
+      - 546176493:706172746E6572732D6A61766131303030332E626F732E6E65746C65646765722E636F6D:80
       Set-Cookie:
-      - JSESSIONID=GT9pJnlc6yvjlwmn8YcPmx1chs1rCLqctm4NyJKBLlpxnhqQ7rJJXYpJlRlNXhynp5g2HZywkcRcQrnM2WGfWCn04dCP7xWC4L7TQrG4M7hXGhnD0v9z4HNTMwWShJF2!1851917845;
+      - JSESSIONID=R5CbJvgdk6VQyXVfJ7nKxymTQLv8JccqSM3yGk9GxC0XsnJvXmvXrBCljpSj205nYSwp1p2BCBL3JpQDKfF19HZD61BSXhL44wT0qcT17LGv2hGL8MVHBGpQlvsYJ9cv!-1949565747;
         path=/
       - NS_VER=2014.2.0; path=/
       X-Powered-By:
@@ -8670,16 +8716,19 @@ http_interactions:
       - text/xml; charset=utf-8
     body:
       encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_112020148337410051908090440_b0cb7f75d1d4</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><record internalId="1127" externalId="RTAXDISABCE" xsi:type="tranSales:Invoice" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"><tranSales:createdDate>2014-11-20T09:30:18.000-08:00</tranSales:createdDate><tranSales:lastModifiedDate>2014-11-20T09:30:18.000-08:00</tranSales:lastModifiedDate><tranSales:customForm internalId="101" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Custom Service Invoice</platformCore:name></tranSales:customForm><tranSales:entity internalId="106" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>3 Joe Smith</platformCore:name></tranSales:entity><tranSales:tranDate>2014-11-20T00:00:00.000-08:00</tranSales:tranDate><tranSales:tranId>9</tranSales:tranId><tranSales:source>Web Services</tranSales:source><tranSales:postingPeriod internalId="16" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Nov 2014</platformCore:name></tranSales:postingPeriod><tranSales:location internalId="4" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>LC Warehouse Commerce</platformCore:name></tranSales:location><tranSales:salesEffectiveDate>2014-11-20T00:00:00.000-08:00</tranSales:salesEffectiveDate><tranSales:totalCostEstimate>0.0</tranSales:totalCostEstimate><tranSales:estGrossProfit>23.07</tranSales:estGrossProfit><tranSales:estGrossProfitPercent>100.0</tranSales:estGrossProfitPercent><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:taxItem internalId="-7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>-Not Taxable-</platformCore:name></tranSales:taxItem><tranSales:taxRate>0.0</tranSales:taxRate><tranSales:toBePrinted>false</tranSales:toBePrinted><tranSales:toBeEmailed>false</tranSales:toBeEmailed><tranSales:toBeFaxed>false</tranSales:toBeFaxed><tranSales:transactionBillAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:billAddressee>Jeff Leung</platformCommon:billAddressee><platformCommon:billAddr1>123 N Broadway</platformCommon:billAddr1><platformCommon:billCity>Los Angeles</platformCommon:billCity><platformCommon:billState>CA</platformCommon:billState><platformCommon:billZip>90012</platformCommon:billZip><platformCommon:billCountry>_unitedStates</platformCommon:billCountry></tranSales:transactionBillAddress><tranSales:billAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:billAddress><tranSales:transactionShipAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:shipAddressee>Jeff Leung</platformCommon:shipAddressee><platformCommon:shipAddr1>123 N Broadway</platformCommon:shipAddr1><platformCommon:shipCity>Los Angeles</platformCommon:shipCity><platformCommon:shipState>CA</platformCommon:shipState><platformCommon:shipZip>90012</platformCommon:shipZip><platformCommon:shipCountry>_unitedStates</platformCommon:shipCountry><platformCommon:shipIsResidential>false</platformCommon:shipIsResidential></tranSales:transactionShipAddress><tranSales:shipAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:shipAddress><tranSales:subTotal>23.07</tranSales:subTotal><tranSales:revenueStatus>_inProgress</tranSales:revenueStatus><tranSales:recognizedRevenue>3.7</tranSales:recognizedRevenue><tranSales:deferredRevenue>19.37</tranSales:deferredRevenue><tranSales:discountTotal>0.0</tranSales:discountTotal><tranSales:total>23.07</tranSales:total><tranSales:status>Open</tranSales:status><tranSales:email>spree@example.com</tranSales:email><tranSales:itemList><tranSales:item><tranSales:item internalId="141" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6-Month Crate Subscription</platformCore:name></tranSales:item><tranSales:line>1</tranSales:line><tranSales:amount>19.37</tranSales:amount><tranSales:isTaxable>true</tranSales:isTaxable><tranSales:deferRevRec>false</tranSales:deferRevRec><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:revRecSchedule internalId="2" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6 Month Subscription</platformCore:name></tranSales:revRecSchedule><tranSales:revRecStartDate>2014-11-20T00:00:00.000-08:00</tranSales:revRecStartDate><tranSales:revRecEndDate>2015-04-30T00:00:00.000-07:00</tranSales:revRecEndDate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>2</tranSales:line><tranSales:amount>1.5</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>1.50</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>3</tranSales:line><tranSales:amount>2.2</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>2.20</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item></tranSales:itemList><tranSales:customFieldList xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:customField internalId="26" scriptId="custbody_esc_last_modified_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField><platformCore:customField internalId="27" scriptId="custbody_esc_created_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField></tranSales:customFieldList></record></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
+      string: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo
+        xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_112120147689981671466136348_939295f8b468</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><searchResponse
+        xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><platformCore:searchResult
+        xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:status
+        isSuccess="true"/><platformCore:totalRecords>1</platformCore:totalRecords><platformCore:pageSize>1000</platformCore:pageSize><platformCore:totalPages>1</platformCore:totalPages><platformCore:pageIndex>1</platformCore:pageIndex><platformCore:searchId>WEBSERVICES_NETSUITE_ACCOUNT_112120147689981671466136348_939295f8b468</platformCore:searchId><platformCore:recordList><platformCore:record
+        internalId="7" externalId="Spree Taxes" xsi:type="listAcct:NonInventorySaleItem"
+        xmlns:listAcct="urn:accounting_2014_1.lists.webservices.netsuite.com"><listAcct:createdDate>2014-10-01T11:36:01.000-07:00</listAcct:createdDate><listAcct:lastModifiedDate>2014-10-16T16:25:01.000-07:00</listAcct:lastModifiedDate><listAcct:incomeAccount
+        internalId="54"><platformCore:name>4000 Sales</platformCore:name></listAcct:incomeAccount><listAcct:taxSchedule
+        internalId="2"><platformCore:name>S2</platformCore:name></listAcct:taxSchedule><listAcct:costEstimateType>_itemDefinedCost</listAcct:costEstimateType><listAcct:enforceMinQtyInternally>true</listAcct:enforceMinQtyInternally><listAcct:isFulfillable>true</listAcct:isFulfillable><listAcct:overallQuantityPricingType>_byLineQuantity</listAcct:overallQuantityPricingType><listAcct:excludeFromSitemap>false</listAcct:excludeFromSitemap><listAcct:sitemapPriority>_auto</listAcct:sitemapPriority><listAcct:isDonationItem>false</listAcct:isDonationItem><listAcct:showDefaultDonationAmount>false</listAcct:showDefaultDonationAmount><listAcct:dontShowPrice>false</listAcct:dontShowPrice><listAcct:itemId>Spree
+        Taxes</listAcct:itemId><listAcct:displayName>Spree Taxes</listAcct:displayName><listAcct:isOnline>false</listAcct:isOnline><listAcct:isInactive>false</listAcct:isInactive></platformCore:record></platformCore:recordList></platformCore:searchResult></searchResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:44:27 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:31 GMT
 - request:
     method: get
     uri: https://webservices.na1.netsuite.com/wsdl/v2014_1_0/netsuite.wsdl
@@ -8699,13 +8748,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:47:42 GMT
+      - Fri, 21 Nov 2014 11:43:30 GMT
       Server:
       - Apache
       Content-Length:
       - '5782'
       Ns-Rtimer-Composite:
-      - 1225111965:706172746E6572732D6A61766131303032322E626F732E6E65746C65646765722E636F6D:80
+      - 771653872:706172746E6572732D6A61766131303032322E626F732E6E65746C65646765722E636F6D:80
       X-Powered-By:
       - Servlet/2.5 JSP/2.1
       P3p:
@@ -10355,7 +10404,7 @@ http_interactions:
         location=\"https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1\"/>\n
         \       </port>\n    </service>\n</definitions>\n"
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:47:43 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:32 GMT
 - request:
     method: post
     uri: https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1
@@ -10363,16 +10412,24 @@ http_interactions:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
-        type="role" internalId="3"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:get><platformMsgs:baseRef
-        xsi:type="platformCore:RecordRef" externalId="RTAXDISABCE" type="invoice"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"
+        xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"
+        xmlns:listRel="urn:relationships_2014_1.lists.webservices.netsuite.com" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"
+        xmlns:actSched="urn:scheduling_2014_1.activities.webservices.netsuite.com"
+        xmlns:setupCustom="urn:customization_2014_1.setup.webservices.netsuite.com"
+        xmlns:listAcct="urn:accounting_2014_1.lists.webservices.netsuite.com" xmlns:tranBank="urn:bank_2014_1.transactions.webservices.netsuite.com"
+        xmlns:tranCust="urn:customers_2014_1.transactions.webservices.netsuite.com"
+        xmlns:listSupport="urn:support_2014_1.lists.webservices.netsuite.com" xmlns:tranGeneral="urn:general_2014_1.transactions.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
+        type="role" internalId="3"></platformCore:role></platformMsgs:passport><platformMsgs:SearchPreferences></platformMsgs:SearchPreferences></env:Header><env:Body><platformMsgs:search><platformMsgs:searchRecord
+        xsi:type="listAcct:ItemSearch"><listAcct:basic><platformCommon:displayName
+        operator="contains"><platformCore:searchValue>Spree Taxes</platformCore:searchValue></platformCommon:displayName></listAcct:basic></platformMsgs:searchRecord></platformMsgs:search></env:Body></env:Envelope>
     headers:
       Soapaction:
-      - '"get"'
+      - '"search"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '850'
+      - '1797'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -10385,15 +10442,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:47:43 GMT
+      - Fri, 21 Nov 2014 11:43:30 GMT
       Server:
       - Apache
       Content-Length:
-      - '1520'
+      - '856'
       Ns-Rtimer-Composite:
-      - 238860757:706172746E6572732D6A61766131303031342E626F732E6E65746C65646765722E636F6D:80
+      - 569167613:706172746E6572732D6A61766131303030332E626F732E6E65746C65646765722E636F6D:80
       Set-Cookie:
-      - JSESSIONID=8hMdJnlCMGrydLxzn8KKzQtp3V2JJhgmGY9mhfChfrwtG2mtcDFyGysHZmfv32JqRTlvvTcFN0tds3R25T2Y1z2JyCvbY5s88nv9cQkn2PvFXyXJGpLYkk4S1hTGLDKL!1851917845;
+      - JSESSIONID=R5CbJvgdk6VQyXVfJ7nKxymTQLv8JccqSM3yGk9GxC0XsnJvXmvXrBCljpSj205nYSwp1p2BCBL3JpQDKfF19HZD61BSXhL44wT0qcT17LGv2hGL8MVHBGpQlvsYJ9cv!-1949565747;
         path=/
       - NS_VER=2014.2.0; path=/
       X-Powered-By:
@@ -10406,16 +10463,19 @@ http_interactions:
       - text/xml; charset=utf-8
     body:
       encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_112020148335445061291103564_9becd35cf341</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><record internalId="1127" externalId="RTAXDISABCE" xsi:type="tranSales:Invoice" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"><tranSales:createdDate>2014-11-20T09:30:18.000-08:00</tranSales:createdDate><tranSales:lastModifiedDate>2014-11-20T09:30:18.000-08:00</tranSales:lastModifiedDate><tranSales:customForm internalId="101" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Custom Service Invoice</platformCore:name></tranSales:customForm><tranSales:entity internalId="106" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>3 Joe Smith</platformCore:name></tranSales:entity><tranSales:tranDate>2014-11-20T00:00:00.000-08:00</tranSales:tranDate><tranSales:tranId>9</tranSales:tranId><tranSales:source>Web Services</tranSales:source><tranSales:postingPeriod internalId="16" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Nov 2014</platformCore:name></tranSales:postingPeriod><tranSales:location internalId="4" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>LC Warehouse Commerce</platformCore:name></tranSales:location><tranSales:salesEffectiveDate>2014-11-20T00:00:00.000-08:00</tranSales:salesEffectiveDate><tranSales:totalCostEstimate>0.0</tranSales:totalCostEstimate><tranSales:estGrossProfit>23.07</tranSales:estGrossProfit><tranSales:estGrossProfitPercent>100.0</tranSales:estGrossProfitPercent><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:taxItem internalId="-7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>-Not Taxable-</platformCore:name></tranSales:taxItem><tranSales:taxRate>0.0</tranSales:taxRate><tranSales:toBePrinted>false</tranSales:toBePrinted><tranSales:toBeEmailed>false</tranSales:toBeEmailed><tranSales:toBeFaxed>false</tranSales:toBeFaxed><tranSales:transactionBillAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:billAddressee>Jeff Leung</platformCommon:billAddressee><platformCommon:billAddr1>123 N Broadway</platformCommon:billAddr1><platformCommon:billCity>Los Angeles</platformCommon:billCity><platformCommon:billState>CA</platformCommon:billState><platformCommon:billZip>90012</platformCommon:billZip><platformCommon:billCountry>_unitedStates</platformCommon:billCountry></tranSales:transactionBillAddress><tranSales:billAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:billAddress><tranSales:transactionShipAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:shipAddressee>Jeff Leung</platformCommon:shipAddressee><platformCommon:shipAddr1>123 N Broadway</platformCommon:shipAddr1><platformCommon:shipCity>Los Angeles</platformCommon:shipCity><platformCommon:shipState>CA</platformCommon:shipState><platformCommon:shipZip>90012</platformCommon:shipZip><platformCommon:shipCountry>_unitedStates</platformCommon:shipCountry><platformCommon:shipIsResidential>false</platformCommon:shipIsResidential></tranSales:transactionShipAddress><tranSales:shipAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:shipAddress><tranSales:subTotal>23.07</tranSales:subTotal><tranSales:revenueStatus>_inProgress</tranSales:revenueStatus><tranSales:recognizedRevenue>3.7</tranSales:recognizedRevenue><tranSales:deferredRevenue>19.37</tranSales:deferredRevenue><tranSales:discountTotal>0.0</tranSales:discountTotal><tranSales:total>23.07</tranSales:total><tranSales:status>Open</tranSales:status><tranSales:email>spree@example.com</tranSales:email><tranSales:itemList><tranSales:item><tranSales:item internalId="141" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6-Month Crate Subscription</platformCore:name></tranSales:item><tranSales:line>1</tranSales:line><tranSales:amount>19.37</tranSales:amount><tranSales:isTaxable>true</tranSales:isTaxable><tranSales:deferRevRec>false</tranSales:deferRevRec><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:revRecSchedule internalId="2" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6 Month Subscription</platformCore:name></tranSales:revRecSchedule><tranSales:revRecStartDate>2014-11-20T00:00:00.000-08:00</tranSales:revRecStartDate><tranSales:revRecEndDate>2015-04-30T00:00:00.000-07:00</tranSales:revRecEndDate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>2</tranSales:line><tranSales:amount>1.5</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>1.50</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>3</tranSales:line><tranSales:amount>2.2</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>2.20</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item></tranSales:itemList><tranSales:customFieldList xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:customField internalId="26" scriptId="custbody_esc_last_modified_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField><platformCore:customField internalId="27" scriptId="custbody_esc_created_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField></tranSales:customFieldList></record></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
+      string: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo
+        xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_11212014768996740476878083_3afe8ba1a367b</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><searchResponse
+        xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><platformCore:searchResult
+        xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:status
+        isSuccess="true"/><platformCore:totalRecords>1</platformCore:totalRecords><platformCore:pageSize>1000</platformCore:pageSize><platformCore:totalPages>1</platformCore:totalPages><platformCore:pageIndex>1</platformCore:pageIndex><platformCore:searchId>WEBSERVICES_NETSUITE_ACCOUNT_11212014768996740476878083_3afe8ba1a367b</platformCore:searchId><platformCore:recordList><platformCore:record
+        internalId="7" externalId="Spree Taxes" xsi:type="listAcct:NonInventorySaleItem"
+        xmlns:listAcct="urn:accounting_2014_1.lists.webservices.netsuite.com"><listAcct:createdDate>2014-10-01T11:36:01.000-07:00</listAcct:createdDate><listAcct:lastModifiedDate>2014-10-16T16:25:01.000-07:00</listAcct:lastModifiedDate><listAcct:incomeAccount
+        internalId="54"><platformCore:name>4000 Sales</platformCore:name></listAcct:incomeAccount><listAcct:taxSchedule
+        internalId="2"><platformCore:name>S2</platformCore:name></listAcct:taxSchedule><listAcct:costEstimateType>_itemDefinedCost</listAcct:costEstimateType><listAcct:enforceMinQtyInternally>true</listAcct:enforceMinQtyInternally><listAcct:isFulfillable>true</listAcct:isFulfillable><listAcct:overallQuantityPricingType>_byLineQuantity</listAcct:overallQuantityPricingType><listAcct:excludeFromSitemap>false</listAcct:excludeFromSitemap><listAcct:sitemapPriority>_auto</listAcct:sitemapPriority><listAcct:isDonationItem>false</listAcct:isDonationItem><listAcct:showDefaultDonationAmount>false</listAcct:showDefaultDonationAmount><listAcct:dontShowPrice>false</listAcct:dontShowPrice><listAcct:itemId>Spree
+        Taxes</listAcct:itemId><listAcct:displayName>Spree Taxes</listAcct:displayName><listAcct:isOnline>false</listAcct:isOnline><listAcct:isInactive>false</listAcct:isInactive></platformCore:record></platformCore:recordList></platformCore:searchResult></searchResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:47:44 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:32 GMT
 - request:
     method: get
     uri: https://webservices.na1.netsuite.com/wsdl/v2014_1_0/netsuite.wsdl
@@ -10435,13 +10495,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:52:27 GMT
+      - Fri, 21 Nov 2014 11:43:31 GMT
       Server:
       - Apache
       Content-Length:
       - '5782'
       Ns-Rtimer-Composite:
-      - "-2127338333:706172746E6572732D6A61766131303031322E626F732E6E65746C65646765722E636F6D:80"
+      - "-1596753787:706172746E6572732D6A61766131303031352E626F732E6E65746C65646765722E636F6D:80"
       X-Powered-By:
       - Servlet/2.5 JSP/2.1
       P3p:
@@ -12091,7 +12151,7 @@ http_interactions:
         location=\"https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1\"/>\n
         \       </port>\n    </service>\n</definitions>\n"
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:52:27 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:33 GMT
 - request:
     method: post
     uri: https://webservices.na1.netsuite.com/services/NetSuitePort_2014_1
@@ -12099,16 +12159,31 @@ http_interactions:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
-        type="role" internalId="3"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:get><platformMsgs:baseRef
-        xsi:type="platformCore:RecordRef" externalId="RTAXDISABCE" type="invoice"></platformMsgs:baseRef></platformMsgs:get></env:Body></env:Envelope>
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"
+        xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"
+        xmlns:listRel="urn:relationships_2014_1.lists.webservices.netsuite.com" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"
+        xmlns:actSched="urn:scheduling_2014_1.activities.webservices.netsuite.com"
+        xmlns:setupCustom="urn:customization_2014_1.setup.webservices.netsuite.com"
+        xmlns:listAcct="urn:accounting_2014_1.lists.webservices.netsuite.com" xmlns:tranBank="urn:bank_2014_1.transactions.webservices.netsuite.com"
+        xmlns:tranCust="urn:customers_2014_1.transactions.webservices.netsuite.com"
+        xmlns:listSupport="urn:support_2014_1.lists.webservices.netsuite.com" xmlns:tranGeneral="urn:general_2014_1.transactions.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
+        type="role" internalId="3"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:add><platformMsgs:record
+        xsi:type="tranSales:Invoice" platformMsgs:externalId="RTAXDIS1247"><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:location
+        internalId="4" type="location"></tranSales:location><tranSales:entity internalId="106"></tranSales:entity><tranSales:itemList><tranSales:item><tranSales:item
+        internalId="141"></tranSales:item><tranSales:quantity>1</tranSales:quantity><tranSales:amount>19.37</tranSales:amount><tranSales:taxRate1>0</tranSales:taxRate1></tranSales:item><tranSales:item><tranSales:item
+        internalId="7"></tranSales:item><tranSales:rate>1.5</tranSales:rate></tranSales:item><tranSales:item><tranSales:item
+        internalId="7"></tranSales:item><tranSales:rate>2.2</tranSales:rate></tranSales:item></tranSales:itemList><tranSales:shippingCost>10</tranSales:shippingCost><tranSales:transactionBillAddress><platformCommon:billAddressee>Jeff
+        Leung</platformCommon:billAddressee><platformCommon:billAddr1>123 N Broadway</platformCommon:billAddr1><platformCommon:billAddr2></platformCommon:billAddr2><platformCommon:billZip>90012</platformCommon:billZip><platformCommon:billCity>Los
+        Angeles</platformCommon:billCity><platformCommon:billState>CA</platformCommon:billState><platformCommon:billCountry>_unitedStates</platformCommon:billCountry><platformCommon:billPhone></platformCommon:billPhone></tranSales:transactionBillAddress><tranSales:transactionShipAddress><platformCommon:shipAddressee>Jeff
+        Leung</platformCommon:shipAddressee><platformCommon:shipAddr1>123 N Broadway</platformCommon:shipAddr1><platformCommon:shipAddr2></platformCommon:shipAddr2><platformCommon:shipZip>90012</platformCommon:shipZip><platformCommon:shipCity>Los
+        Angeles</platformCommon:shipCity><platformCommon:shipState>CA</platformCommon:shipState><platformCommon:shipCountry>_unitedStates</platformCommon:shipCountry><platformCommon:shipPhone></platformCommon:shipPhone></tranSales:transactionShipAddress></platformMsgs:record></platformMsgs:add></env:Body></env:Envelope>
     headers:
       Soapaction:
-      - '"get"'
+      - '"add"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '850'
+      - '3393'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -12121,15 +12196,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 20 Nov 2014 17:52:27 GMT
+      - Fri, 21 Nov 2014 11:43:32 GMT
       Server:
       - Apache
-      Content-Length:
-      - '1520'
       Ns-Rtimer-Composite:
-      - "-798800170:706172746E6572732D6A61766131303031342E626F732E6E65746C65646765722E636F6D:80"
+      - 569169401:706172746E6572732D6A61766131303030332E626F732E6E65746C65646765722E636F6D:80
       Set-Cookie:
-      - JSESSIONID=QVnvJnqbgVQpzxJbydc4hRqv6t22snLP428pl4ClCqw47tBWxvgMD8dbY9mzrhR2mq7MmPqxRMtxNDwrM7hBpjKyd76ks1YSpbLThN0L2p9X5DsyYMCQwLmJS5P6JL9V!1851917845;
+      - JSESSIONID=R5CbJvgdk6VQyXVfJ7nKxymTQLv8JccqSM3yGk9GxC0XsnJvXmvXrBCljpSj205nYSwp1p2BCBL3JpQDKfF19HZD61BSXhL44wT0qcT17LGv2hGL8MVHBGpQlvsYJ9cv!-1949565747;
         path=/
       - NS_VER=2014.2.0; path=/
       X-Powered-By:
@@ -12138,18 +12211,19 @@ http_interactions:
       - CP="CAO PSAa OUR BUS PUR"
       Vary:
       - User-Agent
+      Transfer-Encoding:
+      - chunked
       Content-Type:
       - text/xml; charset=utf-8
     body:
       encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_112020148332592441234500270_ce9d6f2d8465</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><getResponse xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><readResponse><platformCore:status isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><record internalId="1127" externalId="RTAXDISABCE" xsi:type="tranSales:Invoice" xmlns:tranSales="urn:sales_2014_1.transactions.webservices.netsuite.com"><tranSales:createdDate>2014-11-20T09:30:18.000-08:00</tranSales:createdDate><tranSales:lastModifiedDate>2014-11-20T09:30:18.000-08:00</tranSales:lastModifiedDate><tranSales:customForm internalId="101" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Custom Service Invoice</platformCore:name></tranSales:customForm><tranSales:entity internalId="106" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>3 Joe Smith</platformCore:name></tranSales:entity><tranSales:tranDate>2014-11-20T00:00:00.000-08:00</tranSales:tranDate><tranSales:tranId>9</tranSales:tranId><tranSales:source>Web Services</tranSales:source><tranSales:postingPeriod internalId="16" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Nov 2014</platformCore:name></tranSales:postingPeriod><tranSales:location internalId="4" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>LC Warehouse Commerce</platformCore:name></tranSales:location><tranSales:salesEffectiveDate>2014-11-20T00:00:00.000-08:00</tranSales:salesEffectiveDate><tranSales:totalCostEstimate>0.0</tranSales:totalCostEstimate><tranSales:estGrossProfit>23.07</tranSales:estGrossProfit><tranSales:estGrossProfitPercent>100.0</tranSales:estGrossProfitPercent><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:taxItem internalId="-7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>-Not Taxable-</platformCore:name></tranSales:taxItem><tranSales:taxRate>0.0</tranSales:taxRate><tranSales:toBePrinted>false</tranSales:toBePrinted><tranSales:toBeEmailed>false</tranSales:toBeEmailed><tranSales:toBeFaxed>false</tranSales:toBeFaxed><tranSales:transactionBillAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:billAddressee>Jeff Leung</platformCommon:billAddressee><platformCommon:billAddr1>123 N Broadway</platformCommon:billAddr1><platformCommon:billCity>Los Angeles</platformCommon:billCity><platformCommon:billState>CA</platformCommon:billState><platformCommon:billZip>90012</platformCommon:billZip><platformCommon:billCountry>_unitedStates</platformCommon:billCountry></tranSales:transactionBillAddress><tranSales:billAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:billAddress><tranSales:transactionShipAddress xmlns:platformCommon="urn:common_2014_1.platform.webservices.netsuite.com"><platformCommon:shipAddressee>Jeff Leung</platformCommon:shipAddressee><platformCommon:shipAddr1>123 N Broadway</platformCommon:shipAddr1><platformCommon:shipCity>Los Angeles</platformCommon:shipCity><platformCommon:shipState>CA</platformCommon:shipState><platformCommon:shipZip>90012</platformCommon:shipZip><platformCommon:shipCountry>_unitedStates</platformCommon:shipCountry><platformCommon:shipIsResidential>false</platformCommon:shipIsResidential></tranSales:transactionShipAddress><tranSales:shipAddress>Jeff Leung
-        123 N Broadway
-        Los Angeles CA 90012
-        United States</tranSales:shipAddress><tranSales:subTotal>23.07</tranSales:subTotal><tranSales:revenueStatus>_inProgress</tranSales:revenueStatus><tranSales:recognizedRevenue>3.7</tranSales:recognizedRevenue><tranSales:deferredRevenue>19.37</tranSales:deferredRevenue><tranSales:discountTotal>0.0</tranSales:discountTotal><tranSales:total>23.07</tranSales:total><tranSales:status>Open</tranSales:status><tranSales:email>spree@example.com</tranSales:email><tranSales:itemList><tranSales:item><tranSales:item internalId="141" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6-Month Crate Subscription</platformCore:name></tranSales:item><tranSales:line>1</tranSales:line><tranSales:amount>19.37</tranSales:amount><tranSales:isTaxable>true</tranSales:isTaxable><tranSales:deferRevRec>false</tranSales:deferRevRec><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:revRecSchedule internalId="2" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>6 Month Subscription</platformCore:name></tranSales:revRecSchedule><tranSales:revRecStartDate>2014-11-20T00:00:00.000-08:00</tranSales:revRecStartDate><tranSales:revRecEndDate>2015-04-30T00:00:00.000-07:00</tranSales:revRecEndDate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>2</tranSales:line><tranSales:amount>1.5</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>1.50</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item><tranSales:item><tranSales:item internalId="7" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:name>Spree Taxes</platformCore:name></tranSales:item><tranSales:line>3</tranSales:line><tranSales:amount>2.2</tranSales:amount><tranSales:isTaxable>false</tranSales:isTaxable><tranSales:quantity>1.0</tranSales:quantity><tranSales:price internalId="-1" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><tranSales:rate>2.20</tranSales:rate><tranSales:costEstimateType>_itemDefinedCost</tranSales:costEstimateType><tranSales:costEstimate>0.0</tranSales:costEstimate><tranSales:excludeFromRateRequest>false</tranSales:excludeFromRateRequest></tranSales:item></tranSales:itemList><tranSales:customFieldList xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"><platformCore:customField internalId="26" scriptId="custbody_esc_last_modified_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField><platformCore:customField internalId="27" scriptId="custbody_esc_created_date" xsi:type="platformCore:DateCustomFieldRef"><platformCore:value>2014-11-20T00:00:00.000-08:00</platformCore:value></platformCore:customField></tranSales:customFieldList></record></readResponse></getResponse></soapenv:Body></soapenv:Envelope>
+      string: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo
+        xmlns:platformMsgs="urn:messages_2014_1.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_11212014768995353957648547_c2e1f60eb1bb0</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><addResponse
+        xmlns="urn:messages_2014_1.platform.webservices.netsuite.com"><writeResponse><platformCore:status
+        isSuccess="true" xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/><baseRef
+        internalId="1235" externalId="RTAXDIS1247" type="invoice" xsi:type="platformCore:RecordRef"
+        xmlns:platformCore="urn:core_2014_1.platform.webservices.netsuite.com"/></writeResponse></addResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Thu, 20 Nov 2014 17:52:29 GMT
+  recorded_at: Fri, 21 Nov 2014 11:43:35 GMT
 recorded_with: VCR 2.8.0

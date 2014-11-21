@@ -16,7 +16,7 @@ module NetsuiteIntegration
 
     context 'when order is complete' do
 
-      let(:invoice_number) { 'RREGR4354ABCF' }
+      let(:invoice_number) { 'RREGR4354ABHI' }
 
       subject do
         payload = Factories.invoice_order_with_subscription_payload
@@ -29,7 +29,7 @@ module NetsuiteIntegration
       end
 
       it 'imports the invoice' do
-        VCR.use_cassette('invoice/invoice_import', :record => :all, :allow_playback_repeats => true) do
+        VCR.use_cassette('invoice/invoice_import') do
           invoice = subject.create
 
           expect(invoice).to be
@@ -39,16 +39,20 @@ module NetsuiteIntegration
           expect(invoice.item_list.items.count).to eq(1)
 
           # amount =  item[:quantity] * item[:price] (NS amounr as a String)
-          expect(invoice.item_list.items[0].amount).to eq("211.98")
-
-          puts invoice.item_list.items[0].inspect, invoice.shipping_cost.class
+          expect(invoice.item_list.items[0].amount).to eq(211.98)
 
           # shipping costs, address
-          expect(invoice.shipping_cost).to be_nil
+          expect(invoice.shipping_cost).to eq 0   # be_nil
           expect(invoice.transaction_ship_address.ship_addressee).to eq('Aphex Twin')
 
           # billing address
           expect(invoice.transaction_bill_address.bill_addressee).to eq('Aphex Twin')
+        end
+      end
+
+      it "does not reprocess an existing order", :fail => true do
+        VCR.use_cassette('invoice/reject_replayed_order') do
+          expect { subject.create }.to raise_error(NetSuite::InitializationError)
         end
       end
     end
@@ -65,7 +69,7 @@ module NetsuiteIntegration
           config['netsuite_item_for_discounts'] = discount
         end
 
-        let(:invoice_number) { 'RTAXDISABCE' }
+        let(:invoice_number) { 'RTAXDIS1247' }
 
         subject do
           payload = Factories.invoice_order_with_tax_ship_disc_payload
@@ -95,23 +99,23 @@ module NetsuiteIntegration
           described_class.new(config, payload)
         end
 
-        it "builds both tax and discount line", :fail => true do
+        it "builds both tax and discount line" do
 
-          VCR.use_cassette('invoice/taxes_and_discounts', :record => :all, :allow_playback_repeats => true) do
+          VCR.use_cassette('invoice/taxes_and_discounts') do
 
             invoice = subject.create
 
             expect(invoice).to be
 
-            expect(invoice.item_list.items[0].quantity).to eq("1.0")
+            expect(invoice.item_list.items[0].quantity).to eq(1)
 
             expect(invoice.item_list.items.count).to eq(3)
 
             rates = invoice.item_list.items.map(&:rate)
 
             expect(rates).to include(nil)
-            expect(rates).to include("1.50")
-            expect(rates).to include("2.20")
+            expect(rates).to include(1.5)
+            expect(rates).to include(2.2)
 
           end
         end

@@ -21,8 +21,12 @@ module NetsuiteIntegration
     def create
 
        # TODO  do we actually need to check for an existing invoice ?
-      existing_invoice =  NetSuite::Records::Invoice.get({:external_id => order_reference(@order_payload)})
+
+      existing_invoice =  begin
+            NetSuite::Records::Invoice.get({:external_id => order_reference(@order_payload)})
       rescue NetSuite::RecordNotFound
+        nil
+      end
 
       if(existing_invoice)
         raise NetSuite::InitializationError, "NetSuite Invoice already raised for Order \"#{order_reference(@order_payload)}\""
@@ -92,8 +96,6 @@ module NetsuiteIntegration
 
       end   # Spree item list
 
-      puts "Now Sorting Tax/Discount"
-
       # NetSuite treats taxes and discounts as seperate line items.
 
       ["tax", "discount"].map do |type|
@@ -111,7 +113,7 @@ module NetsuiteIntegration
                                                           }) if(value != 0)
       end
 
-      puts "\n\nCreating NetSuite::Records::InvoiceItemList from #{@item_list.size} : #{@item_list}"
+      #puts "\n\nCreating NetSuite::Records::InvoiceItemList from #{@item_list.size} : #{@item_list}"
 
       NetSuite::Records::InvoiceItemList.new(item: @item_list)
     end
