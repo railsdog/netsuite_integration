@@ -159,6 +159,10 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
   end
 
 
+  post '/add_subscription' do
+    order = NetsuiteIntegration::Subscription.new(@config, @payload).import
+    result 200, "Sales Order #{order.external_id} created for Subscription in NetSuite # #{order.tran_id}"
+  end
 
   private
   # NOTE move this somewhere else ..
