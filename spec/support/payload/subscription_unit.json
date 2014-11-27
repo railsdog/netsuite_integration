@@ -1,0 +1,38 @@
+{
+  "shipments": [
+    {
+      "id": "TEST-MAR2014-GNRC-US-NOMC-AL-MS-112614-154816022",
+      "order_id": 357,
+      "order_number": "R338474871",
+      "email": "spree@example.com",
+      "cost": 0,
+      "status": "pending",
+      "shipping_carrier": "FedEx",
+      "shipping_method": "FedEx SmartPost Parcel Select",
+      "requested_shipping_service": "FedEx SmartPost Parcel Select",
+      "updated_at": "2014-11-26T15:22:15.794Z",
+      "items": [
+        {
+          "product_id": "Mens - L",
+          "name": "6-Month Crate Subscription",
+          "quantity": 1,
+          "price": 0,
+          "shipstation_item_name": "MS - Product #7 - 9344"
+        }
+      ],
+      "custom_field_1": "MS",
+      "shipping_address": {
+        "firstname": "Aphex",
+        "lastname": "Twin",
+        "address1": "999 synth st",
+        "address2": "",
+        "zipcode": "90026",
+        "city": "Los angeles",
+        "state": "CA",
+        "country": "US",
+        "phone": "",
+        "state_abbr": "CA"
+      }
+    }
+  ]
+}

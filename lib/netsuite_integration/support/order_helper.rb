@@ -26,6 +26,10 @@ module NetsuiteIntegration
     end
 
 
+    def item_reference(item)
+      item[:name] || item[:id] || item[:product_id]
+    end
+
     def default_preferences
       {
           pageSize: 80,

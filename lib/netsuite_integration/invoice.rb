@@ -57,10 +57,6 @@ module NetsuiteIntegration
 
     private
 
-    def item_reference(item)
-      item[:name] || item[:id] || item[:product_id]
-    end
-
 
     def order_reference(order)
       order_payload[:number] || order_payload[:id]
@@ -77,7 +73,7 @@ module NetsuiteIntegration
 
         non_inventory_item_search = NetsuiteIntegration::Services::NonInventoryItem.new(config)
 
-        netsuite_item = non_inventory_item_search.find_by_name("6-Month Crate Subscription")
+        netsuite_item = non_inventory_item_search.find_by_name(item_id)
 
         unless netsuite_item
           raise NetSuite::RecordNotFound, "Non Inventory Item \"#{item_id}\" not found in NetSuite"

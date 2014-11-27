@@ -14,15 +14,18 @@ describe NetsuiteEndpoint do
 
       let(:request) do
         # loads from support/payload/<xyz>_payload.json
-        payload = Factories.shipment_with_subscription_payload.merge(parameters: parameters )
+        payload = Factories.subscription_unit_payload.merge(parameters: parameters )
 
-        payload['shipments']['order_id'] = invoice_number
+        # TODO confirm this format
+        payload['shipments'][0]['order_number'] = invoice_number
+        puts payload
 
         payload
       end
 
       it 'imports the shipment as SalesOrder and returns an info notification' do
-        VCR.use_cassette('subscription/import_shipment') do
+        VCR.use_cassette('subscription/import_shipment', :record => :all, :allow_playback_repeats => true) do
+          puts "#TS auth : #{auth}"
           post '/add_subscription', request.to_json, auth
           expect(last_response).to be_ok
         end
