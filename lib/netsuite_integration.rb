@@ -25,3 +25,6 @@ require 'netsuite_integration/inventory_stock'
 require 'netsuite_integration/shipment'
 require 'netsuite_integration/subscription'
 require 'netsuite_integration/refund'
+
+# TODO - work out how to get this data into the gem from outside
+require 'netsuite_integration/loot_crate_specifics'

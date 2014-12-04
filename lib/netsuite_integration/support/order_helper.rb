@@ -25,6 +25,11 @@ module NetsuiteIntegration
       NetSuite::Records::RecordRef.new(internal_id: customer.internal_id)
     end
 
+    # Return the unique order refernce
+    def order_reference()
+      order_payload[:number] || order_payload[:id]
+    end
+
 
     def item_reference(item)
       item[:name] || item[:id] || item[:product_id]

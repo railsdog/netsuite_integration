@@ -14,28 +14,30 @@ module NetsuiteIntegration
 
       @invoice = NetSuite::Records::Invoice.new({  tax_rate: 0,
                                                    is_taxable: false,
-                                                   external_id: order_reference(@order_payload)
+                                                   external_id: order_reference
                                                 })
     end
 
     def create
 
-       # TODO  do we actually need to check for an existing invoice ?
-
       existing_invoice =  begin
-            NetSuite::Records::Invoice.get({:external_id => order_reference(@order_payload)})
+            NetSuite::Records::Invoice.get({:external_id => order_reference})
       rescue NetSuite::RecordNotFound
         nil
       end
 
       if(existing_invoice)
-        raise NetSuite::InitializationError, "NetSuite Invoice already raised for Order \"#{order_reference(@order_payload)}\""
+        raise NetSuite::InitializationError, "NetSuite Invoice already raised for Order \"#{order_reference}\""
       end
 
       if(config['netsuite_location_internalid'].present?)
         location = NetSuite::Records::Location.get( :internal_id => config['netsuite_location_internalid'] )
 
         invoice.location = location
+      end
+
+      if(config['netsuite_save_ref_in_memo'].present?)
+        invoice.memo = order_reference
       end
 
       invoice.entity = set_up_customer
@@ -58,11 +60,6 @@ module NetsuiteIntegration
     private
 
 
-    def order_reference(order)
-      order_payload[:number] || order_payload[:id]
-    end
-
-
     def build_item_list
 
       @item_list = []
@@ -76,7 +73,7 @@ module NetsuiteIntegration
         netsuite_item = non_inventory_item_search.find_by_name(item_id)
 
         unless netsuite_item
-          raise NetSuite::RecordNotFound, "Non Inventory Item \"#{item_id}\" not found in NetSuite"
+          raise NetSuite::RecordNotFound, "Non Inventory Item [#{item_id}] not found in NetSuite"
         end
 
         invoice_item = NetSuite::Records::InvoiceItem.new({

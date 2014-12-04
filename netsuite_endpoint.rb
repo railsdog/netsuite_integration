@@ -152,21 +152,24 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
     invoice =  begin
      NetsuiteIntegration::Invoice.new(@config, @payload).create
     rescue => e
-      result 500, "Failed Invoice creation in NetSuite - #{e.message}"
+      result 500, "Failed to create NetSuite Invoice - #{e.message}"
     end
 
-    result 200, "Invoice successfully created in NetSuite for Order #{invoice.external_id}"
+    result 200, "Successfully created NetSuite Invoice for Order #{invoice.external_id}"
   end
 
 
   post '/add_subscription' do
-    begin
-      order = NetsuiteIntegration::Subscription.new(@config, @payload).create
-      result 200, "Sales Order #{order.external_id} created for Subscription in NetSuite # #{order.tran_id}"
+    sales_order =  begin
+      NetsuiteIntegration::Subscription.new(@config, @payload).create
     rescue => e
       puts e.backtrace
       puts e.inspect
+      result 500, "Failed to create NetSuite SalesOrder - #{e.message}"
     end
+
+    puts "DONE #{sales_order.inspect}"
+    result 200, "Successfully created NetSuite Sales Order #{sales_order.external_id} for Subscription #{sales_order.tran_id}"
   end
 
   private

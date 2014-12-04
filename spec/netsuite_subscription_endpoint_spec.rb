@@ -4,34 +4,49 @@ describe NetsuiteEndpoint do
 
   include_examples 'request parameters'
 
-  #TODO create a shared example to create the invoice we can link to
+  let(:message_500){  "Failed to create NetSuite SalesOrder -" }
+  let(:message_200){  "Successfully created NetSuite Sales Order" }
 
   describe 'subscriptions' do
 
     context 'new shipment each month' do
 
-      let(:invoice_number) { 'RENDPOINT0002' }
+      let(:invoice_number) { "RSPEC_SHIP_#{Time.now.hour}#{Time.now.min}" }
 
-      let(:request) do
+      let(:invoice_request) do
+        # Not in Spree so add our location ID to the config parameters
+        parameters[:netsuite_location_internalid] = 4
+
+        parameters[:netsuite_save_ref_in_memo] = true
+
+        # loads from support/payload/<xyz>_payload.json
+        payload = Factories.invoice_order_with_subscription_payload.merge(parameters: parameters )
+
+        payload['order']['number'] = invoice_number
+        payload
+      end
+
+      let(:shipment_request) do
         # loads from support/payload/<xyz>_payload.json
         payload = Factories.subscription_unit_payload.merge(parameters: parameters )
 
-        # TODO confirm this format
-        payload['shipments'][0]['order_number'] = invoice_number
-        puts payload
+        shipment_payload =  payload['shipments'] ? payload['shipments'][0]: payload['shipment']
+        shipment_payload['order_number'] = invoice_number
 
         payload
       end
 
       it 'imports the shipment as SalesOrder and returns an info notification' do
         VCR.use_cassette('subscription/import_shipment', :record => :all, :allow_playback_repeats => true) do
-          puts "#TS auth : #{auth}"
-          post '/add_subscription', request.to_json, auth
-          expect(last_response).to be_ok
-        end
 
-        expect(json_response[:summary]).to include('created for Subscription in NetSuite')
+          post '/add_invoice', invoice_request.to_json, auth  # invoice against which SO needs to link
+
+          post '/add_subscription', shipment_request.to_json, auth
+          expect(last_response).to be_ok
+          expect(json_response[:summary]).to include(message_200)
+        end
       end
+
     end
   end
 
