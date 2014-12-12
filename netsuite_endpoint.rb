@@ -149,6 +149,8 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
 
 
   post '/add_invoice' do
+    logger.info "NetsuiteIntegration add invoice web hook called"
+
     invoice =  begin
      NetsuiteIntegration::Invoice.new(@config, @payload).create
     rescue => e

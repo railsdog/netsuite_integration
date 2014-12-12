@@ -1,10 +1,14 @@
+require 'logger'
+
 module NetsuiteIntegration
   class Base
-    attr_accessor :payload, :config
+    attr_accessor :payload, :config, :logger
 
     def initialize(config, payload = {})
       @config = config
       @payload = payload
+
+      @logger = (config[:logger]) ? config[:logger] : Logger.new(STDOUT)
     end
 
     def customer_service

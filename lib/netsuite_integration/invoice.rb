@@ -12,6 +12,8 @@ module NetsuiteIntegration
 
       @order_payload = payload[:order]
 
+      logger.debug("Start Invoice for #{order_reference}")
+
       @invoice = NetSuite::Records::Invoice.new({  tax_rate: 0,
                                                    is_taxable: false,
                                                    external_id: order_reference
@@ -20,11 +22,19 @@ module NetsuiteIntegration
 
     def create
 
+      logger.debug("In create - check for existing Invoice :external_id => #{order_reference}")
+
       existing_invoice =  begin
             NetSuite::Records::Invoice.get({:external_id => order_reference})
       rescue NetSuite::RecordNotFound
         nil
+      rescue => e
+        logger.error("Failed in create to search NetSuite for Invoice")
+        logger.error(e.inspect)
+        raise
       end
+
+      logger.debug("In create - check for existing Invoice #{order_reference}")
 
       if(existing_invoice)
         raise NetSuite::InitializationError, "NetSuite Invoice already raised for Order \"#{order_reference}\""
@@ -36,21 +46,29 @@ module NetsuiteIntegration
         invoice.location = location
       end
 
+      logger.debug("In create - memo #{order_reference}")
+
       if(config['netsuite_save_ref_in_memo'].present?)
         invoice.memo = order_reference
       end
 
+      logger.debug("Calling set_up_customer")
+
       invoice.entity = set_up_customer
+
+      logger.debug("Calling set_up_customer")
 
       invoice.item_list = build_item_list
 
       invoice.shipping_cost = order_payload[:totals][:shipping]
 
+      logger.debug("Calling set_up_customer")
       invoice.transaction_bill_address = build_bill_address
       invoice.transaction_ship_address = build_ship_address
 
       handle_extra_fields
 
+      logger.debug("Adding Invoice to NetSuiter")
       invoice.add
 
       verify_errors(invoice)
