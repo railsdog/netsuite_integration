@@ -5,8 +5,8 @@ module NetsuiteIntegration
 
       def find_by_external_id(email)
         NetSuite::Records::Customer.get({:external_id => email})
-      # Silence the error
-      # We don't care that the record was not found
+          # Silence the error
+          # We don't care that the record was not found
       rescue NetSuite::RecordNotFound
       end
 
@@ -78,21 +78,31 @@ module NetsuiteIntegration
       end
 
       def address_exists?(customer, payload)
+        puts("#TS address_exists?")
         current = address_hash(payload)
 
+        puts("#TS Results of existing_addresses : [#{existing_addresses(customer)}]")
+
         existing_addresses(customer).any? do |address|
+          puts("#TS check address? #{address == current}")
           address.delete :default_shipping
           address == current
         end
       end
 
       def set_or_create_default_address(customer, payload)
+
+        puts("#TS set_or_create_default_address #{payload.inspect}")
+
         attrs = [ address_hash(payload).update({ default_shipping: true }) ]
 
         existing = existing_addresses(customer).map do |a|
+          puts("#TS existing_addresses #{a.inspect}")
           a[:default_shipping] = false
           a
         end
+
+        puts("#TS customer.update  #{attrs.push(existing).flatten.inspect}")
 
         customer.update addressbook_list: { addressbook: attrs.push(existing).flatten }
       end
@@ -100,37 +110,15 @@ module NetsuiteIntegration
       def add_address(customer, payload)
         return if address_exists?(customer, payload)
 
+        puts("#TS address_exists? false - add address")
+
         customer.update addressbook_list: {
-          addressbook: existing_addresses(customer).push(address_hash(payload))
-        }
+                            addressbook: existing_addresses(customer).push(address_hash(payload))
+                        }
       end
 
-      private
-        def existing_addresses(customer)
-          customer.addressbook_list.addressbooks.map do |addr|
-            {
-              default_shipping: addr.default_shipping,
-              addr1: addr.addr1.to_s,
-              addr2: addr.addr2.to_s,
-              zip: addr.zip.to_s,
-              city: addr.city.to_s,
-              state: addr.state.to_s,
-              country: addr.country.to_s,
-              phone: addr.phone.to_s.gsub(/([^0-9]*)/, "")
-            }
-          end
-        end
-
-        def fill_address(customer, payload)
-          if payload[:address1].present?
-            customer.addressbook_list = {
-              addressbook: address_hash(payload).update({ default_shipping: true })
-            }
-          end
-        end
-
-        def address_hash(payload)
-          {
+      def address_hash(payload)
+        {
             addr1: payload[:address1],
             addr2: payload[:address2],
             zip: payload[:zipcode],
@@ -138,8 +126,35 @@ module NetsuiteIntegration
             state: StateService.by_state_name(payload[:state]),
             country: CountryService.by_iso_country(payload[:country]),
             phone: payload[:phone].to_s.gsub(/([^0-9]*)/, "")
+        }
+      end
+
+      private
+
+      def existing_addresses(customer)
+          customer.addressbook_list.addressbooks.map do |abook|
+            {
+                default_shipping: abook.default_shipping,
+                addr1: abook.addressbook_address.addr1.to_s,
+                addr2: abook.addressbook_address.addr2.to_s,
+                zip: abook.addressbook_address.zip.to_s,
+                city: abook.addressbook_address.city.to_s,
+                state: abook.addressbook_address.state.to_s,
+                country: abook.addressbook_address.country.to_s,
+                phone: abook.addressbook_address.addr_phone.to_s.gsub(/([^0-9]*)/, "")
+            }
+          end
+      end
+
+      def fill_address(customer, payload)
+        if payload[:address1].present?
+          customer.addressbook_list = {
+              addressbook: address_hash(payload).update({ default_shipping: true })
           }
         end
+      end
+
+
     end
   end
 end

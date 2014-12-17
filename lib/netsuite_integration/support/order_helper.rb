@@ -6,14 +6,19 @@ module NetsuiteIntegration
 
 
     def set_up_customer
+      puts("#TS customer_service.find_by_external_id(#{order_payload[:email]})")
       if customer = customer_service.find_by_external_id(order_payload[:email])
+        puts("#TS FOUND - now customer_service.address_exists?")
         if !customer_service.address_exists? customer, order_payload[:shipping_address]
+          puts("#TS Address Does Not Exist - call set_or_create_default_address")
           customer_service.set_or_create_default_address customer, order_payload[:shipping_address]
         end
       else
+        puts("#TS Create new Customer - check Address")
         customer = customer_service.create(order_payload.dup)
       end
 
+      puts "#TSS how???"
       unless customer
         message = if customer_service.customer_instance && customer_service.customer_instance.errors.is_a?(Array)
                     customer_service.customer_instance.errors.map(&:message).join(", ")

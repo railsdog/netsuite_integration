@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/huoxito/netsuite.git
-  revision: 3b8a21341f5e1fcd44b987c4e5f9ca994f878481
-  branch: fix-customer-field-refs
-  specs:
-    netsuite (0.2.4)
-      savon (~> 2.3.0)
-
-GIT
   remote: git://github.com/spree/endpoint_base.git
   revision: 5a819541b20ade1b7ec6eb19f38fbab7eaf3e14e
   specs:
@@ -14,6 +6,12 @@ GIT
       activesupport
       jbuilder
       json
+
+PATH
+  remote: /home/rubyuser/SoftwareDev/railsdog/netsuite
+  specs:
+    netsuite (0.3.0)
+      savon (~> 2.3.0)
 
 GEM
   remote: https://www.rubygems.org/
@@ -61,7 +59,7 @@ GEM
     minitest (5.4.2)
     multi_json (1.10.1)
     multipart-post (2.0.0)
-    nokogiri (1.6.4.1)
+    nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     nori (2.3.0)
     pry (0.9.12.6)

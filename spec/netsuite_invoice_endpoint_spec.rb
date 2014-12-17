@@ -30,7 +30,7 @@ describe NetsuiteEndpoint do
 
     context 'when order is new' do
 
-      it 'imports the invoice and returns an info notification' do
+      it 'imports the invoice and returns an info notification', :debug => true do
         VCR.use_cassette('invoice/import_service') do
           post '/add_invoice', request.to_json, auth
           expect(last_response).to be_ok

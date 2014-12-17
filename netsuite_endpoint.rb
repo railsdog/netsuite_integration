@@ -22,6 +22,8 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
 
   before do
 
+    puts "#TS DEBUG IN BEFORE DO #{@config.inspect}"
+
     if config = @config
       @netsuite_client ||= NetSuite.configure do
         reset!
@@ -154,6 +156,7 @@ class NetsuiteEndpoint < EndpointBase::Sinatra::Base
     invoice =  begin
      NetsuiteIntegration::Invoice.new(@config, @payload).create
     rescue => e
+      logger.error "Failed in add_invoice - #{e.message}"
       result 500, "Failed to create NetSuite Invoice - #{e.message}"
     end
 

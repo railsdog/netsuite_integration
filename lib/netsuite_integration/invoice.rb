@@ -22,10 +22,11 @@ module NetsuiteIntegration
 
     def create
 
-      logger.debug("In create - check for existing Invoice :external_id => #{order_reference}")
+      logger.debug("In create - search existing Invoice :external_id => #{order_reference}")
 
       existing_invoice =  begin
-            NetSuite::Records::Invoice.get({:external_id => order_reference})
+            #NetSuite::Records::Invoice.get({:external_id => order_reference})
+                            nil
       rescue NetSuite::RecordNotFound
         nil
       rescue => e
@@ -39,6 +40,8 @@ module NetsuiteIntegration
       if(existing_invoice)
         raise NetSuite::InitializationError, "NetSuite Invoice already raised for Order \"#{order_reference}\""
       end
+
+      logger.debug("Search for Location :internal_id => #{config['netsuite_location_internalid']}")
 
       if(config['netsuite_location_internalid'].present?)
         location = NetSuite::Records::Location.get( :internal_id => config['netsuite_location_internalid'] )
@@ -56,14 +59,16 @@ module NetsuiteIntegration
 
       invoice.entity = set_up_customer
 
-      logger.debug("Calling set_up_customer")
+      logger.debug("Calling build_item_list")
 
       invoice.item_list = build_item_list
 
       invoice.shipping_cost = order_payload[:totals][:shipping]
 
-      logger.debug("Calling set_up_customer")
+      logger.debug("Calling build_bill_address")
       invoice.transaction_bill_address = build_bill_address
+
+      logger.debug("Calling build_ship_address")
       invoice.transaction_ship_address = build_ship_address
 
       handle_extra_fields

@@ -7,10 +7,11 @@ gem 'tilt-jbuilder', require: 'sinatra/jbuilder'
 gem 'jbuilder', '2.0.6'
 gem 'endpoint_base', github: 'spree/endpoint_base'
 
-gem 'netsuite', github: 'huoxito/netsuite', branch: 'fix-customer-field-refs'
+# the original https://github.com/NetSweet/netsuite - not sure why Wombat using huoxito
+# gem 'netsuite', github: 'huoxito/netsuite', branch: 'fix-customer-field-refs'
+gem 'netsuite', :path => '/home/rubyuser/SoftwareDev/railsdog/netsuite'
 
 gem 'honeybadger'
-
 
 group :development do
   gem "rake"
