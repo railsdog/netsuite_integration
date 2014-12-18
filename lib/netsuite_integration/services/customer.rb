@@ -77,34 +77,41 @@ module NetsuiteIntegration
         end
       end
 
+      def default_ship_addressbook(customer)
+        customer.addressbook_list.addressbooks.find { |a| a.default_shipping == true }
+      end
+
       def address_exists?(customer, payload)
-        puts("#TS address_exists?")
         current = address_hash(payload)
 
-        puts("#TS Results of existing_addresses : [#{existing_addresses(customer)}]")
-
-        existing_addresses(customer).any? do |address|
-          puts("#TS check address? #{address == current}")
-          address.delete :default_shipping
-          address == current
-        end
+        existing_addresses(customer).any? { |address| address == current }
       end
 
       def set_or_create_default_address(customer, payload)
 
-        puts("#TS set_or_create_default_address #{payload.inspect}")
-
-        attrs = [ address_hash(payload).update({ default_shipping: true }) ]
-
-        existing = existing_addresses(customer).map do |a|
-          puts("#TS existing_addresses #{a.inspect}")
-          a[:default_shipping] = false
-          a
+        #TS 2014_2 - address now in sub type Address within each addressbook
+        # set existign address to be non default
+        existing = customer.addressbook_list.addressbooks.map do |abook|
+          {
+              default_shipping: false,
+              addressbook_address: to_hash(abook.addressbook_address, :netsuite)
+          }
         end
 
-        puts("#TS customer.update  #{attrs.push(existing).flatten.inspect}")
+        puts("#TS customer.update  #{existing.flatten.inspect}")
 
-        customer.update addressbook_list: { addressbook: attrs.push(existing).flatten }
+        customer.update addressbook_list: { addressbook: existing.flatten }
+
+        attrs = [{
+            default_shipping: true,
+            addressbook_address: address_hash(payload)
+        }]
+
+        puts("#TS customer.add  #{attrs.inspect}")
+
+        customer.update addressbook_list: { addressbook: attrs }
+
+
       end
 
       def add_address(customer, payload)
@@ -117,6 +124,7 @@ module NetsuiteIntegration
                         }
       end
 
+      # Convert Wombat payload to Netsuite - relevant fields only; comparable
       def address_hash(payload)
         {
             addr1: payload[:address1],
@@ -129,20 +137,57 @@ module NetsuiteIntegration
         }
       end
 
+      # Convert Wombat payload into full hash as per Netsuite::Record::Address
+      def to_netsuite_hash(payload)
+        {
+            :addr1            => payload[:address1].to_s,
+            :addr2            => payload[:address2].to_s,
+            :addr3            => "",
+            :attention        => "",
+            :addressee        => "",
+            :addr_phone       => payload[:phone].to_s.gsub(/([^0-9]*)/, ""),
+            :addr_text        => payload[:addr_text].to_s,
+            :city             => payload[:city].to_s,
+            :state            => StateService.by_state_name(payload[:state]),
+            :zip              => payload[:zipcode].to_s,
+            :country          => CountryService.by_iso_country(payload[:country]),
+            :override         => ""
+        }
+      end
+
+      # Convert a NetSuite address into hash
+      def to_hash(address, keys = :wombat)
+        puts "to_hash => NS ADDRESS #{address.to_hash.inspect}"
+
+        if(keys == :wombat)
+          {
+              :address1 => address.addr1,
+              :address2 =>address.addr2.to_s,
+              :zipcode => address.zip,
+              :city => address.city,
+              :state => address.state,
+              :country => CountryService.by_iso_country(address.country.to_s),
+              :phone => address.addr_phone.to_s.gsub(/([^0-9]*)/, "")
+          }
+        else
+          {
+              addr1:    address.addr1.to_s,
+              addr2:    address.addr2.to_s,
+              zip:      address.zip.to_s,
+              city:     address.city.to_s,
+              state:    address.state.to_s,
+              country:  CountryService.by_iso_country(address.country.to_s),
+              phone:    address.addr_phone.to_s.gsub(/([^0-9]*)/, "")
+          }
+        end
+      end
+
       private
 
       def existing_addresses(customer)
           customer.addressbook_list.addressbooks.map do |abook|
-            {
-                default_shipping: abook.default_shipping,
-                addr1: abook.addressbook_address.addr1.to_s,
-                addr2: abook.addressbook_address.addr2.to_s,
-                zip: abook.addressbook_address.zip.to_s,
-                city: abook.addressbook_address.city.to_s,
-                state: abook.addressbook_address.state.to_s,
-                country: abook.addressbook_address.country.to_s,
-                phone: abook.addressbook_address.addr_phone.to_s.gsub(/([^0-9]*)/, "")
-            }
+            # TS 2014_" - address fields noved off AddressBook to Address
+            to_hash(abook.addressbook_address, :netsuite)
           end
       end
 

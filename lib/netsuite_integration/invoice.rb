@@ -49,6 +49,17 @@ module NetsuiteIntegration
         invoice.location = location
       end
 
+      #TOFIX
+      department_id = config['netsuite_department_internalid'] ? config['netsuite_department_internalid'] : "4"
+      department = NetSuite::Records::Department.get( :internal_id => department_id )
+
+      invoice.department = department
+
+      #TOFIX
+      #klass_id = config['netsuite_department_internalid'] ? config['netsuite_department_internalid'] : "4"
+      #klass = NetSuite::Records::RecordRef.get( :internal_id => department_id )
+      #invoice.klass = config['netsuite_class_internalid'] ? config['netsuite_class_internalid'] : "111"
+
       logger.debug("In create - memo #{order_reference}")
 
       if(config['netsuite_save_ref_in_memo'].present?)
@@ -66,10 +77,10 @@ module NetsuiteIntegration
       invoice.shipping_cost = order_payload[:totals][:shipping]
 
       logger.debug("Calling build_bill_address")
-      invoice.transaction_bill_address = build_bill_address
+      #invoice.transaction_bill_address = build_bill_address
 
       logger.debug("Calling build_ship_address")
-      invoice.transaction_ship_address = build_ship_address
+      #invoice.transaction_ship_address = build_ship_address
 
       handle_extra_fields
 
