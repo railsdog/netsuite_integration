@@ -98,8 +98,6 @@ module NetsuiteIntegration
           }
         end
 
-        puts("#TS customer.update  #{existing.flatten.inspect}")
-
         customer.update addressbook_list: { addressbook: existing.flatten }
 
         attrs = [{
@@ -107,17 +105,14 @@ module NetsuiteIntegration
             addressbook_address: address_hash(payload)
         }]
 
-        puts("#TS customer.add  #{attrs.inspect}")
-
         customer.update addressbook_list: { addressbook: attrs }
-
 
       end
 
+      #TS TOFIX as per set_or_create_default_address
+
       def add_address(customer, payload)
         return if address_exists?(customer, payload)
-
-        puts("#TS address_exists? false - add address")
 
         customer.update addressbook_list: {
                             addressbook: existing_addresses(customer).push(address_hash(payload))

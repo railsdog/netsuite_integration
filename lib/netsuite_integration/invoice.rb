@@ -77,7 +77,8 @@ module NetsuiteIntegration
       invoice.shipping_cost = order_payload[:totals][:shipping]
 
       logger.debug("Calling build_bill_address")
-      #invoice.transaction_bill_address = build_bill_address
+      #TOFIX
+      invoice.bill_address = build_bill_address
 
       logger.debug("Calling build_ship_address")
       #invoice.transaction_ship_address = build_ship_address

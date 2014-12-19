@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://webservices.na1.netsuite.com/wsdl/v2013_2_0/netsuite.wsdl
+    uri: https://webservices.sandbox.netsuite.com/wsdl/v2014_2_0/netsuite.wsdl
     body:
       encoding: US-ASCII
       string: ''
@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Feb 2014 18:56:03 GMT
+      - Fri, 19 Dec 2014 13:56:15 GMT
       Server:
       - Apache
       Content-Length:
-      - '5783'
+      - '5792'
       Ns-Rtimer-Composite:
-      - "-1255705723:706172746E6572732D6A61766131303030312E626F732E6E65746C65646765722E636F6D:80"
+      - 564899450:73622D706172746E6572732D6A6176613031322E7376616C652E6E65746C65646765722E636F6D:80
       X-Powered-By:
       - Servlet/2.5 JSP/2.1
       P3p:
@@ -36,87 +36,87 @@ http_interactions:
       - text/xml
     body:
       encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<definitions xmlns:tns=\"urn:platform_2013_2.webservices.netsuite.com\"
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<definitions xmlns:tns=\"urn:platform_2014_2.webservices.netsuite.com\"
         xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns=\"http://schemas.xmlsoap.org/wsdl/\"
-        xmlns:platformMsgs=\"urn:messages_2013_2.platform.webservices.netsuite.com\"
-        xmlns:platformFaults=\"urn:faults_2013_2.platform.webservices.netsuite.com\"
-        targetNamespace=\"urn:platform_2013_2.webservices.netsuite.com\">\n    <types>\n
+        xmlns:platformMsgs=\"urn:messages_2014_2.platform.webservices.netsuite.com\"
+        xmlns:platformFaults=\"urn:faults_2014_2.platform.webservices.netsuite.com\"
+        targetNamespace=\"urn:platform_2014_2.webservices.netsuite.com\">\n    <types>\n
         \       <xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" elementFormDefault=\"qualified\">\n
-        \           <xsd:import namespace=\"urn:core_2013_2.platform.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/platform/v2013_2_0/core.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:faults_2013_2.platform.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/platform/v2013_2_0/faults.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:messages_2013_2.platform.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/platform/v2013_2_0/messages.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:common_2013_2.platform.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/platform/v2013_2_0/common.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:scheduling_2013_2.activities.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/activities/v2013_2_0/scheduling.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.scheduling_2013_2.activities.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/activities/v2013_2_0/schedulingTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:communication_2013_2.general.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/general/v2013_2_0/communication.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.communication_2013_2.general.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/general/v2013_2_0/communicationTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:relationships_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/relationships.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.relationships_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/relationshipTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:support_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/support.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.support_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/supportTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:accounting_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/accounting.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.accounting_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/accountingTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:sales_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/sales.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.sales_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/saleTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:purchases_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/purchases.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:customers_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/customers.xsd\"/>\n\t\t\t<xsd:import
-        namespace=\"urn:financial_2013_2.transactions.webservices.netsuite.com\" schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/financial.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:bank_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/bank.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:inventory_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/inventory.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.inventory_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/inventoryTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:general_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/general.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:customization_2013_2.setup.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/setup/v2013_2_0/customization.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.customization_2013_2.setup.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/setup/v2013_2_0/customizationTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:employees_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/employees.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.employees_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/employeeTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:filecabinet_2013_2.documents.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/documents/v2013_2_0/fileCabinet.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.filecabinet_2013_2.documents.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/documents/v2013_2_0/fileCabinetTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:website_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/website.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.website_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/websiteTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:employees_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/employees.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:marketing_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/marketing.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.marketing_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/marketingTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:demandplanning_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/demandPlanning.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.demandplanning_2013_2.transactions.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/transactions/v2013_2_0/demandPlanningTypes.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:supplychain_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/supplyChain.xsd\"/>\n
-        \           <xsd:import namespace=\"urn:types.supplychain_2013_2.lists.webservices.netsuite.com\"
-        schemaLocation=\"https://webservices.na1.netsuite.com/xsd/lists/v2013_2_0/supplyChainTypes.xsd\"/>\n\t\t</xsd:schema>\n
+        \           <xsd:import namespace=\"urn:core_2014_2.platform.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/platform/v2014_2_0/core.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:faults_2014_2.platform.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/platform/v2014_2_0/faults.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:messages_2014_2.platform.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/platform/v2014_2_0/messages.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:common_2014_2.platform.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/platform/v2014_2_0/common.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:scheduling_2014_2.activities.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/activities/v2014_2_0/scheduling.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.scheduling_2014_2.activities.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/activities/v2014_2_0/schedulingTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:communication_2014_2.general.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/general/v2014_2_0/communication.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.communication_2014_2.general.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/general/v2014_2_0/communicationTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:relationships_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/relationships.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.relationships_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/relationshipTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:support_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/support.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.support_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/supportTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:accounting_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/accounting.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.accounting_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/accountingTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:sales_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/sales.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.sales_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/saleTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:purchases_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/purchases.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:customers_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/customers.xsd\"/>\n\t\t\t<xsd:import
+        namespace=\"urn:financial_2014_2.transactions.webservices.netsuite.com\" schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/financial.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:bank_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/bank.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:inventory_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/inventory.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.inventory_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/inventoryTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:general_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/general.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:customization_2014_2.setup.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/setup/v2014_2_0/customization.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.customization_2014_2.setup.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/setup/v2014_2_0/customizationTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:employees_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/employees.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.employees_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/employeeTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:filecabinet_2014_2.documents.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/documents/v2014_2_0/fileCabinet.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.filecabinet_2014_2.documents.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/documents/v2014_2_0/fileCabinetTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:website_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/website.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.website_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/websiteTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:employees_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/employees.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:marketing_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/marketing.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.marketing_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/marketingTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:demandplanning_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/demandPlanning.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.demandplanning_2014_2.transactions.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/transactions/v2014_2_0/demandPlanningTypes.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:supplychain_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/supplyChain.xsd\"/>\n
+        \           <xsd:import namespace=\"urn:types.supplychain_2014_2.lists.webservices.netsuite.com\"
+        schemaLocation=\"https://webservices.sandbox.netsuite.com/xsd/lists/v2014_2_0/supplyChainTypes.xsd\"/>\n\t\t</xsd:schema>\n
         \   </types>\n    <message name=\"headers\">\n        <part name=\"applicationInfo\"
         element=\"platformMsgs:applicationInfo\"/>\n        <part name=\"partnerInfo\"
         element=\"platformMsgs:partnerInfo\"/>\n        <part name=\"documentInfo\"
@@ -1672,34 +1672,39 @@ http_interactions:
         \               <soap:fault name=\"UnexpectedErrorFault\" use=\"literal\"/>\n
         \           </fault>\n        </operation>\n    </binding>\n    <service name=\"NetSuiteService\">\n
         \       <port name=\"NetSuitePort\" binding=\"tns:NetSuiteBinding\">\n            <soap:address
-        location=\"https://webservices.na1.netsuite.com/services/NetSuitePort_2013_2\"/>\n
+        location=\"https://webservices.sandbox.netsuite.com/services/NetSuitePort_2014_2\"/>\n
         \       </port>\n    </service>\n</definitions>\n"
     http_version: 
-  recorded_at: Tue, 04 Feb 2014 18:56:06 GMT
+  recorded_at: Fri, 19 Dec 2014 13:56:17 GMT
 - request:
     method: post
-    uri: https://webservices.na1.netsuite.com/services/NetSuitePort_2013_2
+    uri: https://webservices.sandbox.netsuite.com/services/NetSuitePort_2014_2
     body:
       encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><env:Envelope xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
-        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:platformMsgs=\"urn:messages_2013_2.platform.webservices.netsuite.com\"
-        xmlns:env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:platformCore=\"urn:core_2013_2.platform.webservices.netsuite.com\"
-        xmlns:platformCommon=\"urn:common_2013_2.platform.webservices.netsuite.com\"
-        xmlns:listRel=\"urn:relationships_2013_2.lists.webservices.netsuite.com\"
-        xmlns:tranSales=\"urn:sales_2013_2.transactions.webservices.netsuite.com\"
-        xmlns:actSched=\"urn:scheduling_2013_2.activities.webservices.netsuite.com\"
-        xmlns:setupCustom=\"urn:customization_2013_2.setup.webservices.netsuite.com\"
-        xmlns:listAcct=\"urn:accounting_2013_2.lists.webservices.netsuite.com\" xmlns:tranCust=\"urn:customers_2013_2.transactions.webservices.netsuite.com\"
-        xmlns:listSupport=\"urn:support_2013_2.lists.webservices.netsuite.com\" xmlns:tranGeneral=\"urn:general_2013_2.transactions.webservices.netsuite.com\"><env:Header><platformMsgs:passport><platformCore:email>washington@spreecommerce.com</platformCore:email><platformCore:password>test</platformCore:password><platformCore:account>test</platformCore:account><platformCore:role
-        type=\"role\" internalId=\"3\"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:add><platformMsgs:record
-        xsi:type=\"listRel:Customer\" platformMsgs:externalId=\"was@spreecommerce.com\"><listRel:email>was@spreecommerce.com</listRel:email><listRel:entityId>was@spreecommerce.com</listRel:entityId><listRel:firstName>N/A</listRel:firstName><listRel:lastName>N/A</listRel:lastName><listRel:isPerson>true</listRel:isPerson></platformMsgs:record></platformMsgs:add></env:Body></env:Envelope>"
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:platformMsgs="urn:messages_2014_2.platform.webservices.netsuite.com"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:platformCore="urn:core_2014_2.platform.webservices.netsuite.com"
+        xmlns:platformCommon="urn:common_2014_2.platform.webservices.netsuite.com"
+        xmlns:listRel="urn:relationships_2014_2.lists.webservices.netsuite.com" xmlns:tranSales="urn:sales_2014_2.transactions.webservices.netsuite.com"
+        xmlns:actSched="urn:scheduling_2014_2.activities.webservices.netsuite.com"
+        xmlns:setupCustom="urn:customization_2014_2.setup.webservices.netsuite.com"
+        xmlns:listAcct="urn:accounting_2014_2.lists.webservices.netsuite.com" xmlns:tranBank="urn:bank_2014_2.transactions.webservices.netsuite.com"
+        xmlns:tranCust="urn:customers_2014_2.transactions.webservices.netsuite.com"
+        xmlns:tranInvt="urn:inventory_2014_2.transactions.webservices.netsuite.com"
+        xmlns:listSupport="urn:support_2014_2.lists.webservices.netsuite.com" xmlns:tranGeneral="urn:general_2014_2.transactions.webservices.netsuite.com"
+        xmlns:listMkt="urn:marketing_2014_2.lists.webservices.netsuite.com" xmlns:listWebsite="urn:website_2014_2.lists.webservices.netsuite.com"
+        xmlns:fileCabinet="urn:filecabinet_2014_2.documents.webservices.netsuite.com"
+        xmlns:listEmp="urn:employees_2014_2.lists.webservices.netsuite.com"><env:Header><platformMsgs:passport><platformCore:email>NETSUITE_EMAIL</platformCore:email><platformCore:password>NETSUITE_PASSWORD</platformCore:password><platformCore:account>NETSUITE_ACCOUNT</platformCore:account><platformCore:role
+        internalId="3"></platformCore:role></platformMsgs:passport></env:Header><env:Body><platformMsgs:add><platformMsgs:record
+        xsi:type="listRel:Customer" platformMsgs:externalId="spree@example.com"><listRel:email>spree@example.com</listRel:email><listRel:firstName>Spree</listRel:firstName><listRel:lastName>Commerce</listRel:lastName><listRel:phone
+        xsi:nil="true"/><listRel:isPerson>true</listRel:isPerson></platformMsgs:record></platformMsgs:add></env:Body></env:Envelope>
     headers:
       Soapaction:
-      - "\"add\""
+      - '"add"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '1759'
+      - '2138'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -1712,15 +1717,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 04 Feb 2014 18:56:04 GMT
+      - Fri, 19 Dec 2014 13:56:16 GMT
       Server:
       - Apache
       Ns-Rtimer-Composite:
-      - 1679213121:706172746E6572732D6A61766131303030382E626F732E6E65746C65646765722E636F6D:80
+      - 675118924:73622D706172746E6572732D6A6176613030362E7376616C652E6E65746C65646765722E636F6D:80
       Set-Cookie:
-      - JSESSIONID=pqShSxqLw2DP0KFvQNrHj2nMJ0sQmnRqwh35CP9mlm81TgkG7vnzdLLFQGlpnXTQLpRTG7vXQ8yTBP40mFfGsQZvjypj5hlhGs6TQLNxyr03R3KSJXVzNfQsLb0ybJHv!1648015771;
+      - JSESSIONID=L66tJJrJsTpYJy65gvpXHzDznvQ02HWqlB3fn10STGZXL2HXHsWKTwhKD6rwCxzpWBcjsdYvjwG8bNLpRZDmTMBhzRYDJmbLSb5FGDWv1pcpP89CjbWQ2jQZHX0j1RpB!-736428134;
         path=/
-      - NS_VER=2013.2.0; path=/
+      - NS_VER=2014.2.0; path=/
       X-Powered-By:
       - Servlet/2.5 JSP/2.1
       P3p:
@@ -1733,13 +1738,13 @@ http_interactions:
       - text/xml; charset=utf-8
     body:
       encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Header><platformMsgs:documentInfo
-        xmlns:platformMsgs=\"urn:messages_2013_2.platform.webservices.netsuite.com\"><platformMsgs:nsId>WEBSERVICES_test_02042014292398112103419018_86d14a6</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><addResponse
-        xmlns=\"urn:messages_2013_2.platform.webservices.netsuite.com\"><writeResponse><platformCore:status
-        isSuccess=\"true\" xmlns:platformCore=\"urn:core_2013_2.platform.webservices.netsuite.com\"/><baseRef
-        internalId=\"4112\" externalId=\"was@spreecommerce.com\" type=\"customer\"
-        xsi:type=\"platformCore:RecordRef\" xmlns:platformCore=\"urn:core_2013_2.platform.webservices.netsuite.com\"/></writeResponse></addResponse></soapenv:Body></soapenv:Envelope>"
+      string: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Header><platformMsgs:documentInfo
+        xmlns:platformMsgs="urn:messages_2014_2.platform.webservices.netsuite.com"><platformMsgs:nsId>WEBSERVICES_NETSUITE_ACCOUNT_1219201416581686721039202634_494b2c636aa</platformMsgs:nsId></platformMsgs:documentInfo></soapenv:Header><soapenv:Body><addResponse
+        xmlns="urn:messages_2014_2.platform.webservices.netsuite.com"><writeResponse><platformCore:status
+        isSuccess="false" xmlns:platformCore="urn:core_2014_2.platform.webservices.netsuite.com"><platformCore:statusDetail
+        type="ERROR"><platformCore:code>DUP_ENTITY</platformCore:code><platformCore:message>This
+        entity already exists.</platformCore:message></platformCore:statusDetail></platformCore:status></writeResponse></addResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 04 Feb 2014 18:56:08 GMT
+  recorded_at: Fri, 19 Dec 2014 13:56:19 GMT
 recorded_with: VCR 2.8.0
